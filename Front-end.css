@@ -1,0 +1,45 @@
+body {
+    background-color: bisque;
+}
+h1 {
+    text-align: center;
+    font-size: 200%;
+}
+nav li {
+    float: left;
+    width: 150px;
+}
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align:center;
+    padding: 10px 15px;
+}
+    
+    
+    
+    
+pre {
+    margin-left: 35%;
+    font-size: 125%;
+    text-transform: capitalize;
+}
+.P1 {
+    font-size: 150%;
+}
+.Z1 {
+    text-align: center;
+}
+ul {
+    margin-left: 15%;
+}
+.F1 {
+    float: left;
+    width: 175px;
+}
