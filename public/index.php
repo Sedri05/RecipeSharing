@@ -7,16 +7,6 @@
     <link href="Front-end.css" rel="stylesheet"/>
 </head>
 <body>
-<<<<<<< HEAD
-    <p>text<p>
-    <?php
-        if (false){
-            echo "wow";
-            
-        }
-    ?>
-</body>
-=======
         <h1>Titel</h1>
         <nav>
         <ul>
@@ -55,5 +45,4 @@
         </ul>
         </footer>
     </body>
->>>>>>> f787eb988fcda9d87ed54555619d2ac87b92170a
 </html>
