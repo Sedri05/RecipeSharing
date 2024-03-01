@@ -6,29 +6,29 @@
     <title>Document</title>
     <link href="Front-end.css" rel="stylesheet"/>
 </head>
-<body>
-        <h1><a href="index.php">Chefly</a></h1>
+    <body>
         <div class="wrapper">
-
-            <nav class="N1">
-            <ul>
-            <li><a href="home.html">home</a></li>
-            <li><a href="populair.html">Populaire</a></li>
-            <li><a href="tags.html">Tags</a></li>
-            <li><a href="overons.html">Over Ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="inloggen.html">Inloggen</a></li>
-            </ul>
-            </nav>
-
-            <div class="content">
-                
-                <p class="Z1">
+            <div class="D1">      
+                <nav class="N1">
+                <ul>
+                <li><h1><a href="index.php">Chefly</a></h1></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="populair.html">Populaire</a></li>
+                <li><a href="tags.html">Tags</a></li>
+                <li><a href="overons.html">Over Ons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="inloggen.html">Inloggen</a></li>
+                <li>                
+                    <p class="Z1">
                     <label for="zoek"></label>
                     <input type="text" name="tekstveld1" id="zoek" placeholder="zoeken">
-                </p>
-                <div class="D3">
-                </div>
+                    </p>
+                </li>
+                </ul>
+                </nav>
+            </div>
+                <div class="content">
+            
                 <nav>
                 <br>
                 <br>
