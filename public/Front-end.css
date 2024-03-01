@@ -40,18 +40,8 @@ body {
     text-align: left;
     font-size: 200%;
 }
-nav li {
-    font-size: 150%;
-    float: left;
-    list-style: none;
-    width: 175px;
-}
-nav ul::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 nav a {
+    white-space: nowrap;
     display: block;
     color: black;
     text-decoration: none;
