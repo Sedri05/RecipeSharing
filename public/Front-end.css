@@ -10,15 +10,35 @@ body {
 
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+}
+
+.flex-item {
+    display: inline-block;
+}
+
 .div1 {
+    display: grid;
+    align-items: center;
     height: 200px;
     background-color: lightblue;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     border-radius: 100px;
 } 
+
+.nav1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .nav1 h1 {
     text-align: left;
-    font-size: 120%;
+    font-size: 200%;
 }
 nav li {
     font-size: 150%;
@@ -38,6 +58,7 @@ nav a {
     text-align:center;
     padding: 10px 15px;
 }
+
 .par1 {
     font-size: 150%;
 }
