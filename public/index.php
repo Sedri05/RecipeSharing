@@ -24,7 +24,7 @@
             <input type="text" name="tekstveld1" id="zoek" placeholder="Tag">
         </p>
         <br>
-        <h3 class="P1">De populairste recept:</h3>
+        <h3 class="P1">Het populairste recept:</h3>
         #float
         <img class="F1" src="C:\Users\r1000209\Documents\Practise Enterprice\Best-chocolate-cake-recipe-1-of-1-2.jpg" alt="een foto">
         <span>Kleine synopsis van recept of tags van de recept</span>
@@ -32,7 +32,7 @@
         <hr>
         <h3>Kijk ook</h3>
         <hr>
-        <h3>Makkelijke recepten</h3>
+        <h3>Snelle recepten</h3>
         <footer>
         <hr>
         <ul>
