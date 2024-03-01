@@ -18,23 +18,25 @@
         <li><a href="inloggen.html">Inloggen</a></li>
         </ul>
         </nav>
-        <br>
         <p class="Z1">
-            <label for="zoek">Wat voor vandaag?</label>
-            <input type="text" name="tekstveld1" id="zoek" placeholder="Tag">
+            <label for="zoek"></label>
+            <input type="text" name="tekstveld1" id="zoek" placeholder="zoeken">
         </p>
+        <nav class="N2">
+        <hr>
+        <nav>
         <br>
         <h3 class="P1">Het populairste recept:</h3>
         #float
         <img class="F1" src="C:\Users\r1000209\Documents\Practise Enterprice\Best-chocolate-cake-recipe-1-of-1-2.jpg" alt="een foto">
         <span>Kleine synopsis van recept of tags van de recept</span>
         
-        <hr>
+        
         <h3>Kijk ook</h3>
-        <hr>
+        
         <h3>Snelle recepten</h3>
         <footer>
-        <hr>
+        
         <ul>
             <li>Home</li>
             <li>Populaire</li>
