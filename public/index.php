@@ -7,7 +7,7 @@
     <link href="Front-end.css" rel="stylesheet"/>
 </head>
 <body>
-        <h1>Titel</h1>
+        <h1><a href="index.php">Chefly</a></h1>
         <nav>
         <ul>
         <li><a href="home.html">home</a></li>
