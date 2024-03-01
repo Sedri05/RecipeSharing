@@ -10,13 +10,13 @@ body {
 
 }
 
-.D1 {
+.div1 {
     height: 200px;
     background-color: lightblue;
     padding-top: 50px;
     border-radius: 100px;
 } 
-.N1 h1 {
+.nav1 h1 {
     text-align: left;
     font-size: 120%;
 }
@@ -38,19 +38,13 @@ nav a {
     text-align:center;
     padding: 10px 15px;
 }
-
-pre {
-    margin-left: 35%;
-    font-size: 125%;
-    text-transform: capitalize;
-}
-.P1 {
+.par1 {
     font-size: 150%;
 }
-.Z1 {
+.zoek1 {
     text-align: right;
 }
-.F1 {
+.foto1 {
     float: left;
     width: 175px;
 }
