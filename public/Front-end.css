@@ -22,7 +22,10 @@ nav a {
     text-align:center;
     padding: 10px 15px;
 }
-    
+.D3 {
+    height: 12.5px;
+    background-color: black;
+} 
     
     
     
@@ -37,8 +40,6 @@ pre {
 .Z1 {
     text-align: right;
     margin-right: 50px;
-}
-.N2 {
 }
 ul {
     margin-left: 15%;
