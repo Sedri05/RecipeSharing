@@ -1,25 +1,30 @@
 body {
     background-color: white;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .wrapper {
     min-width:800px;
     max-width:1600px;
     margin:0px auto 0px auto;
+
 }
 
 .D1 {
     height: 200px;
-    background-color: lightgray;
+    background-color: lightblue;
     padding-top: 50px;
+    border-radius: 100px;
 } 
-h1 {
+.N1 h1 {
     text-align: left;
-    font-size: 100%;
+    font-size: 120%;
 }
 nav li {
+    font-size: 150%;
     float: left;
     list-style: none;
-    width: 150px;
+    width: 175px;
 }
 nav ul::after {
     content: "";
@@ -27,7 +32,6 @@ nav ul::after {
     clear: both;
 }
 nav a {
-    
     display: block;
     color: black;
     text-decoration: none;
@@ -45,7 +49,6 @@ pre {
 }
 .Z1 {
     text-align: right;
-    margin-right: 50px;
 }
 .F1 {
     float: left;
