@@ -9,11 +9,14 @@
 </head>
 
 <body>
-    <p>Username</p>
-    <input type="text" id="username"> </input>
+    <p>E-mail</p>
+    <input type="text" id="email"> </input>
     <p>Password</p>
     <input type="password" id="password"> </input>
     <input type="button" onclick="login()" value="Log in"></input>
+    <p id="err">
+
+    </p>
 </body>
 
 </html>

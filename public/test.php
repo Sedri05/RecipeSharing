@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php 
-    set_include_path('/usr/lib/pear');
     require("../private/test.php")
     ?>
 </body>
