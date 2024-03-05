@@ -5,12 +5,13 @@ function login() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-            document.getElementById("err").innerHTML = this.responseText;
             var res = JSON.parse(this.responseText);
+
             if (res.success !== undefined) {
                 window.location.href = "/index.php";
             } else if (res.error !== undefined) {
                 var err_result = res["error"];
+
                 switch (err_result) {
                     case "email_not_set":
                         document.getElementById("email_error").innerHTML =
@@ -35,7 +36,6 @@ function login() {
             } else {
                 document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
             }
-            
         }
     };
     xmlhttp.open("POST", "login.php", true);
