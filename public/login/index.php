@@ -9,12 +9,14 @@
 </head>
 
 <body>
-    <p>E-mail</p>
+    <label for="email">E-mail</label>
     <input type="text" id="email"> </input>
-    <p>Password</p>
+    <p id="email_error"></p>
+    <label for="password">Password</label>
     <input type="password" id="password"> </input>
+    <p id="password_error"></p>
     <input type="button" onclick="login()" value="Log in"></input>
-    <p id="err">
+    <p id="general_error">
 
     </p>
 </body>

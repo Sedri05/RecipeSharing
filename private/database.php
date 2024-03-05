@@ -14,7 +14,8 @@ class Database
         $this->__connect();
     }
 
-    private function __connect(){
+    private function __connect()
+    {
         try {
             $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->database);
             if (mysqli_connect_errno()) {
@@ -25,9 +26,10 @@ class Database
         }
     }
 
-    private function close() {
+    private function close()
+    {
         $this->conn->close();
-            unset($conn);
+        unset($conn);
     }
 
     function select(string $query, array $params = [])
@@ -65,7 +67,7 @@ class Database
     private function executeStatement($query, $params = [])
     {
         try {
-            if (isset($this->conn)){
+            if (isset($this->conn)) {
                 $this->__connect();
             }
             $stmt = $this->conn->prepare($query);
