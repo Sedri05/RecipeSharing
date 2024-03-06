@@ -4,7 +4,7 @@
     <nav class="header-nav">
         <div class="header-flex">
             <div class="header-flex-item">
-                <h1><a href="index.php">Chefly</a></h1>
+                <h1><a href="/">Chefly</a></h1>
             </div>
             <div class="header-flex-item"><a href="/">Home</a></div>
             <div class="header-flex-item"><a href="/">Populaire</a></div>
