@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <?php require("../header.php")?>
     <div class="container">
         <label for="email">E-mail</label>
         <input type="text" id="email"> </input>

@@ -9,6 +9,7 @@
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+    <?php require("../header.php")?>
     <div class="container">
         <label for="firstname">First Name</label>
         <input type="text" id="firstname"> </input>
