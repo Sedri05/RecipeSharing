@@ -21,7 +21,7 @@
                     <div class="flex-item"><a href="tags.html">Tags</a></div>
                     <div class="flex-item"><a href="overons.html">Over Ons</a></div>
                     <div class="flex-item"><a href="contact.html">Contact</a></div>
-                    <div class="flex-item"><a href="inloggen.html">Inloggen</a></div>
+                    <div class="flex-item"><a href="login">Inloggen</a></div>
                     <div class="flex-item">
                         <p class="zoek1">
                             <label for="zoek"></label>
