@@ -25,6 +25,7 @@ require_once "../../private/database.php";
 $database = new Database();
 
 $compare = $database->select_one("SELECT `Wachtwoord` FROM `gebruiker` WHERE email = ?", ["s", [$email]]);
+
 if (empty($compare) || is_null($compare)){
     http_response_code(400);
     echo json_encode(array("error" => "email_incorrect"));
@@ -34,6 +35,7 @@ if (empty($compare) || is_null($compare)){
     echo json_encode(array("general_error" => "Something went wrong trying to access the database"));
     exit();
 }
+
 $ssalt = explode(".", $compare["Wachtwoord"])[0];
 $pd_hash = hash_hmac("sha512", $ssalt.$password, $pepper);
 
