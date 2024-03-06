@@ -1,27 +1,15 @@
-body {
-    background-color: white;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-.wrapper {
-    min-width:800px;
-    max-width:1600px;
-    margin:0px auto 0px auto;
-
-}
-
-.flex {
+.header-flex {
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 80%;
 }
 
-.flex-item {
+.header-flex-item {
     display: inline-block;
 }
 
-.div1 {
+.header-container {
     display: grid;
     align-items: center;
     height: 200px;
@@ -30,17 +18,17 @@ body {
     border-radius: 100px;
 } 
 
-.nav1 {
+.header-nav {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.nav1 h1 {
+.header-nav h1 {
     text-align: left;
     font-size: 200%;
 }
-nav a {
+.header-nav a {
     white-space: nowrap;
     display: block;
     color: black;
@@ -48,14 +36,6 @@ nav a {
     text-align:center;
     padding: 10px 15px;
 }
-
-.par1 {
-    font-size: 150%;
-}
-.zoek1 {
+.header-zoek {
     text-align: right;
-}
-.foto1 {
-    float: left;
-    width: 175px;
 }
