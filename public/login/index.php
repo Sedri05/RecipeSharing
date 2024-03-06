@@ -20,6 +20,7 @@
         <p id="password_error"></p> <!--Hier komen wachtwoord errors zoals, geen of incorrect wachtwoord. Maak dit rood-->
         <input type="button" onclick="login()" value="Log in"></input>
         <p id="general_error"></p> <!--Hier komen general errors. Maak dit rood-->
+        <a href="../signup">Ik heb geen account.</a>
     </div>
 </body>
 

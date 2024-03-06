@@ -2,15 +2,20 @@
 
 class Database
 {
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $database = "recepten";
+    private $servername;
+    private $username;
+    private $password;
+    private $database;
     private $conn;
 
 
     function __construct()
     {
+        $config = require("config.php");
+        $this->servername = $config["servername"];
+        $this->username = $config["username"];
+        $this->password = $config["password"];
+        $this->database = $config["database"];
         $this->__connect();
     }
 
@@ -26,13 +31,37 @@ class Database
         }
     }
 
+    private function validateArray(array $params = []){
+        for($i = 0; $i < count($params); $i++){
+            $params[$i] = trim($params[$i]);
+            $params[$i] = stripslashes($params[$i]);
+            $params[$i] = htmlspecialchars($params[$i]);
+        }
+        return $params;
+    }
+
     private function close()
     {
         $this->conn->close();
         unset($conn);
     }
 
-    function select(string $query, array $params = [])
+    function insert(string $query, $params = [], $close = true){
+        try {
+            $stmt = $this->executeStatement($query, $params);
+            $stmt->close();
+
+            return true;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        } finally {
+            if ($close)
+                $this->close();
+        }
+        return false;
+    }
+
+    function select(string $query, array $params = [], $close = true)
     {
         try {
             $stmt = $this->executeStatement($query, $params);
@@ -43,7 +72,8 @@ class Database
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         } finally {
-            $this->close();
+            if ($close)
+                $this->close();
         }
         return false;
     }
@@ -76,9 +106,8 @@ class Database
             }
 
             if ($params) {
-                $stmt->bind_param($params[0], $params[1]);
+                $stmt->bind_param($params[0], ...$this->validateArray($params[1]));
             }
-
             $stmt->execute();
 
             return $stmt;

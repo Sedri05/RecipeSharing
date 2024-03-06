@@ -5,7 +5,13 @@ function login() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-            var res = JSON.parse(this.responseText);
+            console.log(this.responseText);
+            try {
+                var res = JSON.parse(this.responseText);
+            } catch (error){
+                document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
+                return;
+            }
 
             if (res.success !== undefined) {
                 window.location.href = "/index.php";
