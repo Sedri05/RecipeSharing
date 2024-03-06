@@ -7,8 +7,7 @@
 </head>
 <body>
     <?php 
-    set_include_path('/usr/lib/pear');
-    require("../public/header.php")
+    require("../header.php")
     ?>
 </body>
 </html>
