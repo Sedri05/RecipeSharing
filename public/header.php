@@ -6,7 +6,6 @@
             <div class="header-flex-item">
                 <h1><a href="/">Chefly</a></h1>
             </div>
-            <div class="header-flex-item"><a href="/">Home</a></div>
             <div class="header-flex-item"><a href="/">Populaire</a></div>
             <div class="header-flex-item"><a href="/search">Tags</a></div>
             <div class="header-flex-item"><a href="/about">Over Ons</a></div>
