@@ -36,6 +36,9 @@
     text-align:center;
     padding: 10px 15px;
 }
+.header-flex-item-search {
+    margin-left: auto;
+}
 .header-zoek {
     text-align: right;
 }

@@ -9,7 +9,7 @@
             <div class="header-flex-item"><a href="/search">Tags</a></div>
             <div class="header-flex-item"><a href="/about">Over Ons</a></div>
             <div class="header-flex-item"><a href="/login">Inloggen</a></div>
-            <div class="header-flex-item">
+            <div class="header-flex-item-search">
                 <p class="header-zoek">
                     <label for="zoek"></label>
                     <input type="text" name="tekstveld1" id="zoek" placeholder="zoeken">
