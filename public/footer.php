@@ -1,5 +1,4 @@
-<?php echo "<footer>
-        
+<footer>
         <ul>
             <li>Home</li>
             <li>Populaire</li>
@@ -8,5 +7,4 @@
             <li>Contact</li>
             <li>Inloggen</li>
         </ul>
-        </footer>"
-?>
+</footer>

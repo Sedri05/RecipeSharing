@@ -9,3 +9,8 @@ body {
     margin:0px auto 0px auto;
 
 }
+
+h3 {
+    font-size: 125%;
+    font-weight: bold;
+}

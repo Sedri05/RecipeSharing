@@ -5,14 +5,21 @@
     width: 92%;
 }
 
+.header-flex-item-logo {
+    font-size: 150%;
+    margin-right: 25px;
+}
+
 .header-flex-item {
     display: inline-block;
+    font-size: 130%;
+    margin-right: 25px;
 }
 
 .header-container {
     display: grid;
     align-items: center;
-    height: 150px;
+    height: 125px;
     background-color: lightblue;
     /*padding-top: 50px;*/
     border-radius: 100px;
@@ -27,7 +34,9 @@
 .header-nav h1 {
     text-align: left;
     font-size: 200%;
+    font-weight: bold;
 }
+
 .header-nav a {
     white-space: nowrap;
     display: block;
@@ -36,6 +45,7 @@
     text-align:center;
     padding: 10px 15px;
 }
+
 .header-flex-item-search {
     margin-left: auto;
     width: max-content;
@@ -54,7 +64,7 @@
     outline: none;
     border: none;
     background: transparent;
-    width: 300px;
+    width: 400px;
 }
 
 .search-input::placeholder,
