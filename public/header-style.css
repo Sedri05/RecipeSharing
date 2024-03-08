@@ -21,7 +21,6 @@
     align-items: center;
     height: 125px;
     background-color: lightblue;
-    /*padding-top: 50px;*/
     border-radius: 100px;
 } 
 
@@ -70,8 +69,4 @@
 .search-input::placeholder,
 .search-icon {
     color: rgba(0, 0, 0, 0.5);
-}
-
-.header-zoek {
-    text-align: right;
 }
