@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollmenu p {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.title-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
+}
+
+.title-div h1 {
+    
+    align-self:flex-start;
+}
+
+.title-div p {
+    margin-left: auto;
+}
+
+.scrollmenu-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+
+.scrollmenu-title {
+    font-size: 22px;
+}
