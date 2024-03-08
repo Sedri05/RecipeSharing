@@ -52,6 +52,7 @@ if ($exits !== false && !is_null($exits) && array_key_exists("email", $exits)){
     exit();
 }
 
-//$database->insert("INSERT INTO `gebruiker`(`Naam`, `Achernaam`, `Email`, `Wachtwoord`, `Joindate`) VALUES (?, ?, ?, ?, NOW())", ["sssss", [$firstname, $lastname, $email, $pd_hash]])
+$database->insert("INSERT INTO `gebruiker`(`Naam`, `Achernaam`, `Email`, `Wachtwoord`, `Joindate`) VALUES (?, ?, ?, ?, NOW())", ["ssss", [$firstname, $lastname, $email, $pd_hash]]);
+echo json_encode(array("success" => "login_success"));
 
 ?>
