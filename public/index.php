@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +16,11 @@
 
         <h3 class="par1">Het populairste recept:</h3>
         #float
-        <img class="foto1" src="C:\Users\r1000209\Documents\Practise Enterprice\Best-chocolate-cake-recipe-1-of-1-2.jpg" alt="een foto">
+        <img class="foto1" src="" alt="een foto">
         <span>Kleine synopsis van recept of tags van de recept</span>
-
+        <?php if (isset($_SESSION["logged_in"])) {?>
+        <p> You are logged in</p>
+        <?php } ?>
 
         <h3>Kijk ook</h3>
 

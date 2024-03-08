@@ -24,7 +24,7 @@ $pepper = $config["pepper"];
 require_once "../../private/database.php";
 $database = new Database();
 
-$compare = $database->select_one("SELECT `Wachtwoord` FROM `gebruiker` WHERE email = ?", ["s", [$email]]);
+$compare = $database->select_one("SELECT `Wachtwoord`, `GebruikerID` FROM `gebruiker` WHERE email = ?", ["s", [$email]]);
 
 if (empty($compare) || is_null($compare)){
     http_response_code(400);
@@ -40,6 +40,9 @@ $ssalt = explode(".", $compare["Wachtwoord"])[0];
 $pd_hash = hash_hmac("sha512", $ssalt.$password, $pepper);
 
 if ($ssalt.".".$pd_hash === $compare["Wachtwoord"]){
+    session_start();
+    $_SESSION["logged_in"] = true;
+    $_SESSION["user"] = $compare["GebruikerID"];
     echo json_encode(array("success" => "login_success"));
 } else {
     http_response_code(400);
