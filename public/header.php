@@ -8,7 +8,11 @@
             </div>
             <div class="header-flex-item"><a href="/search">Tags</a></div>
             <div class="header-flex-item"><a href="/about">Over Ons</a></div>
-            <div class="header-flex-item"><a href="/login">Inloggen</a></div>
+            <?php if (isset($_SESSION["logged_in"])) {?>
+                <div class="header-flex-item"><a href="/account">Account</a></div>
+            <?php } else {?>
+                <div class="header-flex-item"><a href="/login">Inloggen</a></div>
+            <?php } ?>
             <div class="header-flex-item-search">
                     <span class="search-icon material-symbols-outlined">search</span>
                     <input class="search-input" type="text" placeholder="zoeken">
