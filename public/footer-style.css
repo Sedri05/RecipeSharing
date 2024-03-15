@@ -1,1 +1,46 @@
-
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #365486;
+    display: flex;
+}
+footer div{
+    text-align: center;
+}
+.footer-nav a {
+    display: block;
+    padding-left: 50px;
+    margin-left: 300px;
+    white-space: nowrap;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align:center;
+    padding-top: 10px;
+}
+.sendto{
+    margin-left: auto;
+    margin-right: 300px;
+}
+form input{
+    width: 300px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+}
+form button {
+    background: transparent;
+    border: 2px solid;
+    color: white ;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+}
