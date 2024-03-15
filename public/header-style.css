@@ -17,8 +17,14 @@ body {
 
 .header-flex-item {
     display: inline-block;
+    align-self:baseline;
     font-size: 130%;
     margin-right: 25px;
+}
+
+.header-flex-item-title {
+    display: inline-block;
+    align-self:baseline;
 }
 
 .header-container {

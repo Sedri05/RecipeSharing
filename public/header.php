@@ -3,7 +3,7 @@
 <div class="header-container">
     <nav class="header-nav">
         <div class="header-flex">
-            <div class="header-flex-item-">
+            <div class="header-flex-item-title">
                 <h1><a href="/">Chefly</a></h1>
             </div>
             <div class="header-flex-item"><a href="/search">Tags</a></div>
