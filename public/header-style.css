@@ -19,8 +19,9 @@
 .header-container {
     display: grid;
     align-items: center;
+    width: auto;
     height: 125px;
-    background-color: lightblue;
+    background-color: #7FC7D9;
     border-radius: 100px;
 } 
 
