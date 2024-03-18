@@ -28,6 +28,7 @@ body {
 }
 
 .header-container {
+    margin-top: 10px;
     display: grid;
     align-items: center;
     width: auto;
