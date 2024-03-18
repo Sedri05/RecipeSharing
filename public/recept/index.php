@@ -40,28 +40,41 @@
                 <h1> <?php echo $recept_info["Title"]; ?> </h1>
                 <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
             </div>
-            <div class="scrollmenu-div">
-                <p class="scrollmenu-title">Tags</p>
-                <div class="scrollmenu">
-                    <?php
-                    foreach ($recept_tags as $tag) {
-                        echo "<p> " . $tag["Tagname"] . "</p>";
-                    }
-                    ?>
+            <div class="ingr-tags-image">
+                <div class="recept-image">
+                    <img  style='height: 400px; width: 400px; object-fit: contain'src="/black-cake-2.jpg" alt="dit is een test foto"/>
+                </div>
+                <div class="ingr-tags">
+                    <div class="scrollmenu-div">
+                        <p class="scrollmenu-title">Tags</p>
+                        <div class="scrollmenu">
+                            <?php
+                            foreach ($recept_tags as $tag) {
+                                echo "<p> " . $tag["Tagname"] . "</p>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="scrollmenu-div">
+                        <p class="scrollmenu-title">Ingredienten</p>
+                        <div class="scrollmenu">
+                            <?php
+                            foreach ($ingredients as $ingredient) {
+                                echo "<p> " . $ingredient["Ingredient"] . "</p>";
+                            }
+                            ?>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="scrollmenu-div">
-                <p class="scrollmenu-title">Ingredienten</p>
-                <div class="scrollmenu">
-                    <?php
-                    foreach ($ingredients as $ingredient) {
-                        echo "<p> " . $ingredient["Ingredient"] . "</p>";
-                    }
-                    ?>
+            
+            <div class="bereiding-div">
+                <p class="bereiding-title">Bereiding</p>
+                <div class="bereiding">
+                    <p>
+                        <?php echo $recept_info["Bereiding"]; ?>
+                    </p>
                 </div>
-            </div>
-            <div>
-
             </div>
         </div>
     </div>

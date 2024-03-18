@@ -59,3 +59,37 @@ h1 {
 .scrollmenu-title {
     font-size: 22px;
 }
+
+.bereiding-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+.recept-image {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+.ingr-tags-image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.bereiding-title {
+    font-size: 22px;
+}
+.bereiding {
+    overflow: auto;
+    white-space: nowrap;
+}
+.bereiding p {  
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
