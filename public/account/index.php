@@ -20,7 +20,7 @@
     }
 
     $user = $_SESSION["user"];
-    require("../../private/database.php");
+    require_once("../../private/database.php");
     $database = new Database();
     $user = $database->select_one("SELECT `GebruikerID`, `Naam`, `Achternaam`, `Email`, `Joindate` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$user]]);
     //print_r($user);
@@ -32,17 +32,25 @@
 
     <div class="container">
         <div class="action-select">
-            <button>Verander informatie</button>
-            <button>Mijn recepten</button>
-            <button>Favorieten</button>
-            <button>Verwijder Account</button>
+            <button selected id="informatie" onclick="getAction('informatie', this)">Mijn informatie</button>
+            <button id="verander" onclick="getAction('veranderInformatie', this)">Verander informatie</button>
+            <button id="recepten" onclick="getAction('veranderInformatie', this)">Mijn recepten</button>
+            <button id="favorieten" onclick="getAction('veranderInformatie', this)">Favorieten</button>
+            <button id="delete" onclick="getAction('veranderInformatie', this)">Verwijder Account</button>
         </div>
-        <div class="info">
-            <?php
-            echo "<h2> Naam </h2> <p> " . $user["Naam"] . " " . $user["Achternaam"] . "</p>";
-            echo "<p> Email: " . $email . "</p>";
-            echo "<p> Join date: " . date_format(date_create($user["Joindate"]), "F jS Y H:i:s") . "</p>";
-            ?>
+        <div class="info" id="info">
+            <div class="info-text">
+                <h2> Naam </h2>
+                <p> <?php echo  $user["Naam"] . " " . $user["Achternaam"] ?> </p>
+            </div>
+            <div class="info-text">
+                <h2> Email </h2>
+                <p> <?php echo $email ?> </p>
+            </div>
+            <div class="info-text">
+                <h2> Join Date </h2>
+                <p> <?php echo date_format(date_create($user["Joindate"]), "F jS Y H:i:s") ?> </p>
+            </div>
         </div>
     </div>
 
