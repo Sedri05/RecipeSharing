@@ -23,16 +23,8 @@
     $recept_tags = $database->select("SELECT `Tagname` FROM `tag` t LEFT JOIN `tagsrecept` r ON t.TagID = r.TagID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $ingredients = $database->select("SELECT `Ingredient` FROM `ingredient` i LEFT JOIN `ingredientrecept` r ON i.IngredientID = r.IngredientID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $creator = $database->select_one("SELECT `Naam`, `Achternaam` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$recept_info["GebruikerID"]]]);
-
+    $review = $database->select_one("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]]);
     echo "<title>" . $recept_info["Title"] . "</title>";
-
-    print_r($recept_info);
-    echo "<br> <br>";
-    print_r($recept_tags);
-    echo "<br> <br>";
-    print_r($ingredients);
-    echo "<br> <br>";
-    print_r($creator);
     ?>
     <div class="centered">
         <div class="container">
@@ -42,7 +34,7 @@
             </div>
             <div class="ingr-tags-image">
                 <div class="recept-image">
-                    <img  style='height: 400px; width: 400px; object-fit: contain'src="/black-cake-2.jpg" alt="dit is een test foto"/>
+                    <img  style='height: 400px; width: 700px; object-fit: cover'src="/black-cake-2.jpg" alt="dit is een test foto"/>
                 </div>
                 <div class="ingr-tags">
                     <div class="scrollmenu-div">
@@ -75,6 +67,16 @@
                         <?php echo $recept_info["Bereiding"]; ?>
                     </p>
                 </div>
+            </div>
+            <hl>
+            <div class="review-div">
+                <p class="review-title">Reviews</p>
+                <div class="review">
+                    <p>
+                        <?php echo $review["reviewtekst"]; ?>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
