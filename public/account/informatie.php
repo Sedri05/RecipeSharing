@@ -10,6 +10,7 @@ $local_part = $email_parts[0];
 $masked_local_part = strlen($local_part) > 2 ? substr($local_part, 0, 2) . str_repeat("*", strlen($local_part) - 2) : "**";
 $email = $masked_local_part . "@" . $email_parts[1];
 ?>
+<p class="success" id="success"></p>
 <div class="info-text">
     <h2> Naam </h2>
     <p> <?php echo  $user["Naam"] . " " . $user["Achternaam"] ?> </p>
