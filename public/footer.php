@@ -10,9 +10,9 @@
     <div class="sendto">
         <h3>Blijf op de hoogte:</h3>
         <form>
-            <input type="email" placeholder="Free Robux" required>
+            <input class="inputfoot" type="email" placeholder="Free Robux" required>
             <br>
-            <button type="submit">Subcribe Now</button>
+            <button class="buttonfoot" type="submit">Subcribe Now</button>
         </form>
     </div>
 </footer>

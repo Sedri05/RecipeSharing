@@ -43,7 +43,7 @@ footer div{
     margin-right: 300px;
     color: white;
 }
-form input{
+.inputfoot{
     width: 300px;
     height: 45px;
     border-radius: 4px;
@@ -54,7 +54,7 @@ form input{
     border: none;
     font-style: italic;
 }
-form button {
+.buttonfoot {
     background: transparent;
     border: 2px solid;
     color: white ;
