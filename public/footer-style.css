@@ -7,6 +7,7 @@ footer {
     padding-bottom: 25px;
     background-color: #365486;
     display: flex;
+    padding-left: auto;
 }
 footer div{
     text-align: center;

@@ -34,9 +34,10 @@
         <div class="action-select">
             <button selected id="informatie" onclick="getAction('informatie', this)">Mijn informatie</button>
             <button id="verander" onclick="getAction('veranderInformatie', this)">Verander informatie</button>
-            <button id="recepten" onclick="getAction('veranderInformatie', this)">Mijn recepten</button>
+            <button id="recepten" onclick="getAction('recepten', this)">Mijn recepten</button>
             <button id="favorieten" onclick="getAction('veranderInformatie', this)">Favorieten</button>
             <button id="delete" onclick="getAction('veranderInformatie', this)">Verwijder Account</button>
+            <button id="logout" onclick="logout()">Log Out</button>
         </div>
         <div class="info" id="info">
             <div class="info-text">
