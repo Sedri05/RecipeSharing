@@ -101,4 +101,21 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
+}
+
+.recept-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.recept-title {
+    font-size: 120%;
+}
+
+.info-button {
+    background-color: #bdc3c7;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
 }
