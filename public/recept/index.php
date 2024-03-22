@@ -8,9 +8,10 @@
     <script src="scripts.js"></script>
     <link href="/reset.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
-<body>
+<body> 
     <div class="wrapper">
         <?php require("../header.php");
         if (!isset($_GET["recept"])) { ?>
@@ -44,6 +45,9 @@
                     </div>
                     <div class="Moeilijkheid">
                         <p> Moeilijkheid: <?php echo $recept_info["Moeilijkheid"]; ?>/5 </p>
+                    </div>
+                    <div class="Personen">
+                        <p> Aantal personen: <?php echo $recept_info["Personen"]; ?> </p>
                     </div>
                 </div>
                 <div class="ingr-tags-image">
