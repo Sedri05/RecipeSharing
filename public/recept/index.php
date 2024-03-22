@@ -25,13 +25,14 @@
     $creator = $database->select_one("SELECT `Naam`, `Achternaam` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$recept_info["GebruikerID"]]], false);
     $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]], false);
     $type = $database->select_one("SELECT `Maaltijdtype` FROM `maaltijdtype` WHERE `MaaltijdtypeID` = ?;", ["i", [$recept_info["MaaltijdtypeID"]]]);
-    print_r($type);
     ?>
     <div class="centered">
         <div class="container">
             <div class="title-div">
                 <div class="title">
                     <h1> <?php echo $recept_info["Title"]; ?> </h1>
+                </div>
+                <div class="creator">
                     <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
                 </div>
                 <div class="maaltijdtype">
@@ -46,7 +47,7 @@
             </div>
             <div class="ingr-tags-image">
                 <div class="recept-image">
-                    <img  style='height: 400px; width: 700px; object-fit: cover'src="/black-cake-2.jpg" alt="dit is een test foto"/>
+                    <img class="image" src="/black-cake-2.jpg" alt="dit is een test foto"/>
                 </div>
                 <div class="ingr-tags">
                     <div class="scrollmenu-div">

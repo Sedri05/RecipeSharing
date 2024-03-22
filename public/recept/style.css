@@ -21,7 +21,23 @@
     flex-direction: row;
     align-content: flex-start;
 }
-
+.ingr-tags {
+    margin-top:15px;
+    background-color: #DCF2F1;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 15px 5px 15px;
+    white-space:nowrap;
+}
+.image {
+    margin: 15px; 
+    margin-left: 0px;
+    height: 400px; 
+    width: 700px; 
+    object-fit: cover; 
+    border-radius: 30px;
+}
 .scrollmenu {
     overflow: auto;
     white-space: nowrap;
@@ -40,9 +56,10 @@ h1 {
 .title-div {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
     align-items: baseline;
+    margin-top: 10px;
 }
 .title {
     width: 100%;
@@ -51,13 +68,48 @@ h1 {
     align-content: center;
     align-items: baseline;
 }
-
+.creator {
+    background-color: #bdc3c7;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 15px 5px 15px;
+    white-space:nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.maaltijdtype {
+    background-color: #bdc3c7;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 15px 5px 15px;
+    white-space:nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.Bereidingstijd {
+    background-color: #bdc3c7;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 15px 5px 15px;
+    white-space:nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.Moeilijkheid {
+    background-color: #bdc3c7;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 15px 5px 15px;
+    white-space:nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .title h1 {
     align-self:flex-start;
-}
-
-.title p {
-    margin-left: auto;
 }
 
 .scrollmenu-div {
