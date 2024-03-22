@@ -1,12 +1,4 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
-body footer {
-    margin-top: auto;
-}
 
 h3 {
     font-size: 125%;
