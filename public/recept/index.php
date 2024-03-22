@@ -23,7 +23,8 @@
     $recept_tags = $database->select("SELECT `Tagname` FROM `tag` t LEFT JOIN `tagsrecept` r ON t.TagID = r.TagID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $ingredients = $database->select("SELECT `Ingredient` FROM `ingredient` i LEFT JOIN `ingredientrecept` r ON i.IngredientID = r.IngredientID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $creator = $database->select_one("SELECT `Naam`, `Achternaam` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$recept_info["GebruikerID"]]]);
-    $review = $database->select_one("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]]);
+    $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]]);
+    print_r($recept_info);
     echo "<title>" . $recept_info["Title"] . "</title>";
     ?>
     <div class="centered">
@@ -68,19 +69,17 @@
                     </p>
                 </div>
             </div>
-            <hl>
             <div class="review-div">
                 <p class="review-title">Reviews</p>
                 <div class="review">
                     <p>
-                        <?php echo $review["reviewtekst"]; ?>
+                        <?php echo $review[0]["reviewtekst"]; ?>
                     </p>
                 </div>
-
             </div>
         </div>
     </div>
-                        
+         
     <?php require("../footer.php") ?>
 </body>
 
