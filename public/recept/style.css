@@ -42,6 +42,7 @@
 .scrollmenu {
     width: 100%;
     overflow: scroll;
+    text-align: start;
 }
 
 .scrollmenu p {
