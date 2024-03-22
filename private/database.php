@@ -118,7 +118,7 @@ class Database
     private function executeStatement($query, $params = [])
     {
         try {
-            if (isset($this->conn)) {
+            if (!isset($this->conn)) {
                 $this->__connect();
             }
             $stmt = $this->conn->prepare($query);
