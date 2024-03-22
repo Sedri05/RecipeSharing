@@ -1,3 +1,13 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body footer {
+    margin-top: auto;
+}
+
 footer {
     position: relative;
     left: 0;
@@ -7,6 +17,7 @@ footer {
     padding-bottom: 25px;
     background-color: #365486;
     display: flex;
+    padding-left: auto;
 }
 footer div{
     text-align: center;

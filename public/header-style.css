@@ -1,4 +1,4 @@
-body {
+.wrapper {
     background-color: #FFF;
     margin-left: 25px;
     margin-right: 25px;
@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 92%;
+    min-width: 92%;
 }
 
 .header-flex-item-logo {

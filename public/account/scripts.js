@@ -16,6 +16,10 @@ function getAction(action, elem) {
     xhttp.send();
 }
 
+function logout(){
+    window.location.href = "/logout.php"
+}
+
 function updateInfo(form) {
     event.preventDefault();
 

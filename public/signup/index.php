@@ -30,6 +30,7 @@
         <input type="button" onclick="signup()" value="Sign Up"></input>
         <p id="general_error"></p> <!--Hier komen general errors. Maak dit rood-->
         <a href="../login">Ik heb al een account.</a>
+        <?php require("footer.php") ?>
     </div>
 </body>
 </html>

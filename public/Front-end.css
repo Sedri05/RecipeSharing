@@ -1,16 +1,4 @@
-.wrapper {
-    min-width:800px;
-    max-width:1600px;
-    margin:0px auto 0px auto;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
-.wrapper footer {
-    margin-top: auto;
-}
 
 h3 {
     font-size: 125%;
