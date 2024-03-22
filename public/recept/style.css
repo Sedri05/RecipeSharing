@@ -15,6 +15,13 @@
     text-align: center;
 }
 
+.ingr-tags-image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
 .scrollmenu {
     overflow: auto;
     white-space: nowrap;
@@ -40,7 +47,6 @@ h1 {
 }
 
 .title-div h1 {
-    
     align-self:flex-start;
 }
 
@@ -58,4 +64,56 @@ h1 {
 
 .scrollmenu-title {
     font-size: 22px;
+}
+
+.bereiding-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+.recept-image {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+
+
+.bereiding-title {
+    font-size: 22px;
+}
+.bereiding {
+    overflow: auto;
+    white-space: nowrap;
+}
+.bereiding p {  
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.review-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+
+.review-title{
+    font-size:22px;
+}
+
+.review {
+    overflow: auto;
+    white-space: nowrap;
+}
+.review p {  
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }

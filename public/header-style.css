@@ -1,5 +1,5 @@
 body {
-    background-color: #DCF2F1;
+    background-color: #FFF;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -28,6 +28,7 @@ body {
 }
 
 .header-container {
+    margin-top: 10px;
     display: grid;
     align-items: center;
     width: auto;

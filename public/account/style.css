@@ -1,0 +1,104 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+
+button {
+    background-color: #DCF2F1  ;
+    border: solid #365486 2px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: -2px;
+    transition: background-color .5s ease-out;
+}
+
+.text-input {
+    margin-top: 2px;
+    border:#365486 2px solid;
+    padding: 5px;
+    width: 30%;
+    min-width: 150px;
+    border-radius: 3px;
+}
+
+.submit{
+    background-color: white;
+    border:#365486 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+    width: 60%;
+    transition: .5s ease-out;
+}
+
+.submit:hover{
+    background-color: #7FC7D9;
+    transform: scale(1.05);
+}
+
+button:hover{
+
+    background-color: #7FC7D9 ;
+
+    overflow: hidden;
+}
+
+button[selected] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+button:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button:last-child {
+    margin-bottom: 0; /* Removes negative margin from the bottom of the last button */
+    border-bottom-left-radius: 10px; /* Round bottom-left corner */
+    border-bottom-right-radius: 10px; /* Round bottom-right corner */
+}
+
+.action-select {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+.info {
+    height: min-content;
+    background-color: #DCF2F1;
+    border: #365486 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.info-text {
+    margin-bottom: 10px;
+}
+
+.info-text:last-child{
+    margin-bottom: 0;
+}
+
+.submit-div {
+    width: 30%;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

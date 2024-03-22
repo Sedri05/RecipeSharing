@@ -7,6 +7,7 @@ class Database
     private $password;
     private $database;
     private $conn;
+    private $pepper;
 
 
     function __construct()
@@ -16,6 +17,7 @@ class Database
         $this->username = $config["username"];
         $this->password = $config["password"];
         $this->database = $config["database"];
+        $this->pepper = $config["pepper"];
         $this->__connect();
     }
 
@@ -31,8 +33,9 @@ class Database
         }
     }
 
-    private function validateArray(array $params = []){
-        for($i = 0; $i < count($params); $i++){
+    private function validateArray(array $params = [])
+    {
+        for ($i = 0; $i < count($params); $i++) {
             $params[$i] = trim($params[$i]);
             $params[$i] = stripslashes($params[$i]);
             $params[$i] = htmlspecialchars($params[$i]);
@@ -40,13 +43,30 @@ class Database
         return $params;
     }
 
-    private function close()
+    function close()
     {
-        $this->conn->close();
-        unset($conn);
+        @$this->conn->close();
+        unset($this->conn);
     }
 
-    function insert(string $query, $params = [], $close = true){
+    function insert(string $query, $params = [], $close = true)
+    {
+        try {
+            $stmt = $this->executeStatement($query, $params);
+            $stmt->close();
+
+            return true;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        } finally {
+            if ($close)
+                $this->close();
+        }
+        return false;
+    }
+
+    function update(string $query, $params = [], $close = true)
+    {
         try {
             $stmt = $this->executeStatement($query, $params);
             $stmt->close();
@@ -78,7 +98,7 @@ class Database
         return false;
     }
 
-    function select_one(string $query, array $params = [])
+    function select_one(string $query, array $params = [], $close = true)
     {
         try {
             $stmt = $this->executeStatement($query, $params);
@@ -89,7 +109,8 @@ class Database
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         } finally {
-            $this->close();
+            if ($close)
+                $this->close();
         }
         return false;
     }
@@ -97,7 +118,7 @@ class Database
     private function executeStatement($query, $params = [])
     {
         try {
-            if (isset($this->conn)) {
+            if (!isset($this->conn)) {
                 $this->__connect();
             }
             $stmt = $this->conn->prepare($query);
@@ -114,6 +135,20 @@ class Database
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
+    }
+
+    function check_password($password, $hashed)
+    {
+        $salt = explode(".", $hashed)[0];
+        $pd_hash = hash_hmac("sha512", $salt . $password, $this->pepper);
+        return $salt.".".$pd_hash === $hashed;
+    }
+
+    function hash_password($password)
+    {
+        $salt = bin2hex(random_bytes(32));
+        $pd_hash = hash_hmac("sha512", $salt . $password, $this->pepper);
+        return $salt . "." . $pd_hash;
     }
 
     public function print()

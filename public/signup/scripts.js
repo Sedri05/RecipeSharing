@@ -17,27 +17,24 @@ function signup() {
                 window.location.href = "/index.php";
             } else if (res.error !== undefined) {
                 var err_result = res["error"];
-                document.getElementById(err_result[0]+"_error").innerHTML = err_result[1];
+                document.getElementById(err_result[0] + "_error").innerHTML = err_result[1];
             } else {
                 document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
             }
         }
     };
     xmlhttp.open("POST", "signup.php", true);
-    xmlhttp.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
-    );
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("email=" + username + "&password=" + password + "&firstname=" + firstname + "&lastname=" + lastname);
 }
 
-function checkPassword(){
+function checkPassword() {
     password = document.getElementById("password").value;
     password_confirm = document.getElementById("confirm_password").value;
 
-    if (password != password_confirm){
+    if (password != password_confirm) {
         document.getElementById("confirm_password_error").innerHTML = "Passwords do not match!";
-        return false
+        return false;
     } else {
         document.getElementById("confirm_password_error").innerHTML = "";
         return true;
