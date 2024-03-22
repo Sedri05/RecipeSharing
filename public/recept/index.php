@@ -37,11 +37,13 @@
                     <div class="creator">
                         <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
                     </div>
+                </div>
+                <div class="info">
                     <div class="maaltijdtype">
                         <p> <?php echo $type["Maaltijdtype"]; ?> </p>
                     </div>
                     <div class="Bereidingstijd">
-                        <p> <?php echo $recept_info["Berijdingstijd"]; ?>min. </p>
+                        <p> <?php echo $recept_info["Berijdingstijd"]; ?>min </p>
                     </div>
                     <div class="Moeilijkheid">
                         <p> Moeilijkheid: <?php echo $recept_info["Moeilijkheid"]; ?>/5 </p>
