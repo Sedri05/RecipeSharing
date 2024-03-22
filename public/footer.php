@@ -1,10 +1,10 @@
-<link href="/footer-style.css" rel="stylesheet" />
+<link href="/footer-style.css" rel="stylesheet" >
 <footer>
     <div class="footer-nav">
         <ul>
-            <a href="index.php">Home</a>
-            <a href="/search">Tags</a>
-            <a href="/about">Over Ons</a>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="/search">Tags</a></li>
+            <li><a href="/about">Over Ons</a></li>
         </ul>
     </div>
     <div class="sendto">
@@ -14,4 +14,5 @@
             <br>
             <button type="submit">Subcribe Now</button>
         </form>
+    </div>
 </footer>
