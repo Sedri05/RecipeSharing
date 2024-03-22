@@ -2,6 +2,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: arial;
 }
 
 body footer {
@@ -24,18 +25,23 @@ footer div{
 }
 .footer-nav a {
     display: block;
-    padding-left: 50px;
-    margin-left: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 325px;
     white-space: nowrap;
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     text-align:center;
-    padding-top: 10px;
+    padding-top: 15px;
+}
+.footer-nav a:hover {
+    color:aqua;
 }
 .sendto{
     margin-left: auto;
     margin-right: 300px;
+    color: white;
 }
 form input{
     width: 300px;
@@ -46,6 +52,7 @@ form input{
     margin-bottom: 20px;
     outline: none;
     border: none;
+    font-style: italic;
 }
 form button {
     background: transparent;
@@ -54,4 +61,7 @@ form button {
     border-radius: 30px;
     padding: 10px 30px;
     font-size: 15px;
+}
+form button:hover {
+    color:aqua;
 }
