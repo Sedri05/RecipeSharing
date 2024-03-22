@@ -23,15 +23,25 @@
     $recept_tags = $database->select("SELECT `Tagname` FROM `tag` t LEFT JOIN `tagsrecept` r ON t.TagID = r.TagID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $ingredients = $database->select("SELECT `Ingredient` FROM `ingredient` i LEFT JOIN `ingredientrecept` r ON i.IngredientID = r.IngredientID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
     $creator = $database->select_one("SELECT `Naam`, `Achternaam` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$recept_info["GebruikerID"]]], false);
-    $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]]);
+    $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]], false);
     print_r($recept_info);
-    echo "<title>" . $recept_info["Title"] . "</title>";
     ?>
     <div class="centered">
         <div class="container">
             <div class="title-div">
-                <h1> <?php echo $recept_info["Title"]; ?> </h1>
-                <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
+                <div class="title">
+                    <h1> <?php echo $recept_info["Title"]; ?> </h1>
+                    <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
+                </div>
+                <div class="maaltijdtype">
+                   
+                </div>
+                <div class="Bereidingstijd">
+                    <p> <?php echo $recept_info["Berijdingstijd"]; ?>min. </p>
+                </div>
+                <div class="Moeilijkheid">
+                    <p> Moeilijkheid: <?php echo $recept_info["Moeilijkheid"]; ?>/5 </p>
+                </div>
             </div>
             <div class="ingr-tags-image">
                 <div class="recept-image">

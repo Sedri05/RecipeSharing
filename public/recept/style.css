@@ -37,8 +37,14 @@
 h1 {
     font-size: 32px;
 }
-
 .title-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+.title {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -46,11 +52,11 @@ h1 {
     align-items: baseline;
 }
 
-.title-div h1 {
+.title h1 {
     align-self:flex-start;
 }
 
-.title-div p {
+.title p {
     margin-left: auto;
 }
 
