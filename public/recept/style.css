@@ -22,10 +22,11 @@
     align-content: flex-start;
 }
 .ingr-tags {
+    overflow: hidden;
     margin-top:15px;
     background-color: #DCF2F1;
     border-radius: 20px;
-    width: auto;
+    width: 100%;
     height: auto;
     padding: 5px 15px 5px 15px;
     white-space:nowrap;
@@ -39,8 +40,8 @@
     border-radius: 30px;
 }
 .scrollmenu {
-    overflow: auto;
-    white-space: nowrap;
+    width: 100%;
+    overflow: scroll;
 }
 
 .scrollmenu p {
@@ -118,6 +119,7 @@ h1 {
     flex-direction: column;
     align-content: center;
     align-items: baseline;
+
 }
 
 .scrollmenu-title {
