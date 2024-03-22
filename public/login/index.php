@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="wrapper">
     <?php require("../header.php")?>
     <div class="container">
         <label for="email">E-mail</label>
@@ -23,6 +24,9 @@
         <p id="general_error"></p> <!--Hier komen general errors. Maak dit rood-->
         <a href="../signup">Ik heb geen account.</a>
     </div>
+    <?php
+    require("../footer.php")
+    ?>
 </body>
 
 </html>
