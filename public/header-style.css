@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 92%;
+    min-width: 92%;
 }
 
 .header-flex-item-logo {
