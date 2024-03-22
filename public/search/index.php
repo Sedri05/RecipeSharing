@@ -8,9 +8,11 @@
     <link href="/reset.css" rel="stylesheet">
 </head>
 <body>
-    <?php 
-    require("../header.php")
-    ?>
+    <div class="wrapper">
+        <?php 
+        require("../header.php")
+        ?>
+    </div>
     <?php require("../footer.php") ?>
 </body>
 </html>     
