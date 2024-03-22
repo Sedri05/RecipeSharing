@@ -35,7 +35,7 @@
                     <p> <?php echo $creator["Naam"] . " " . $creator["Achternaam"] ?> </p>
                 </div>
                 <div class="maaltijdtype">
-                   
+                    <p> <?php echo $type["Maaltijdtype"]; ?> </p>
                 </div>
                 <div class="Bereidingstijd">
                     <p> <?php echo $recept_info["Berijdingstijd"]; ?>min. </p>
