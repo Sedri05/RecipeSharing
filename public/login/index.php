@@ -15,10 +15,10 @@
         <?php require("../header.php")?>
         <div class="container">
             <div class="navigation">
-                <label for="email">E-mail</label>
+                <label class="login" for="email">E-mail</label>
                 <input class="text" type="text" id="email"> </input>
                 <p id="email_error"></p> <!--Hier komen email errors zoals, geen of incorrecte email. Maak dit rood-->
-                <label for="password">Password</label>
+                <label class="pass" for="password">Password</label>
                 <input class="text" type="password" id="password"> </input>
                 <p id="password_error"></p> <!--Hier komen wachtwoord errors zoals, geen of incorrect wachtwoord. Maak dit rood-->
                 <input class="button" type="button" onclick="login()" value="Log in"></input>
