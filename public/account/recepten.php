@@ -11,8 +11,11 @@ $recepten = $database->select(
 
 foreach ($recepten as $recept) {
 ?>
-    <div class="info-text">
+    <div class="info-text border">
+        <div>
+        <img src="/black-cake-2.jpg" alt="" srcset="">
         <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
+        </div>
         <div class="recept-info">
             <div class="info-button"> Personen: <?php echo $recept["Personen"] ?> </div>
             <div class="info-button"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?>/5 </div>
