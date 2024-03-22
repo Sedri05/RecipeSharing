@@ -19,12 +19,13 @@
     display: inline-block;
     align-self:baseline;
     font-size: 130%;
-    margin-right: 25px;
+    padding-right: 25px;
 }
 
 .header-flex-item-title {
     display: inline-block;
     align-self:baseline;
+    padding-right: 50px;
 }
 
 .header-container {
@@ -47,6 +48,7 @@
     text-align: left;
     font-size: 200%;
     font-weight: bold;
+    font-style: italic;
 }
 
 .header-nav a {
@@ -56,6 +58,10 @@
     text-decoration: none;
     text-align:center;
     padding: 10px 15px;
+}
+
+.header-nav a:hover {
+    color:white;
 }
 
 .header-flex-item-search {
@@ -81,5 +87,6 @@
 
 .search-input::placeholder,
 .search-icon {
+    font-style: italic;
     color: rgba(0, 0, 0, 0.5);
 }
