@@ -78,7 +78,7 @@
                 </div>
                 <div class="blue-box">
                 <div class="bereiding-div">
-                    <img class="image" src="/black-cake-2.jpg" alt="dit is een test foto" />
+                    <img class="image" src="/pasta-met-zalm-1.jpg" alt="dit is een test foto" />
                     <p class="bereiding-title">Bereiding</p>
 
                     <p>
