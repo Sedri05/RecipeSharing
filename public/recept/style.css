@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -8,41 +8,44 @@
 
 .centered {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
 }
 
-.ingr-tags-image {
+.ingr-tags-div {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
+    margin-bottom: 15px;
 }
 .ingr-tags {
     overflow: hidden;
-    margin-top:15px;
-    background-color: #DCF2F1;
+    background-color: #dcf2f1;
     border-radius: 20px;
     width: 100%;
     height: min-content;
-    padding: 15px   ;
-    white-space:nowrap;
+    padding: 15px;
+    padding-bottom: 0;
+    white-space: nowrap;
 }
 .image {
-    margin: 15px; 
+    float: left;
     margin-left: 0px;
-    height: 400px; 
-    width: 700px; 
-    object-fit: cover; 
-    border-radius: 30px;
+    height: 400px;
+    width: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 10px;
 }
 .scrollmenu {
     width: 100%;
     overflow: scroll;
     text-align: start;
+    padding-bottom: 15px;
 }
 
 .scrollmenu p {
@@ -53,11 +56,9 @@
     border-radius: 20px;
     width: auto;
     height: auto;
-    white-space:nowrap;
+    white-space: nowrap;
     background-color: #bdc3c7;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 h1 {
@@ -84,7 +85,7 @@ h1 {
     width: auto;
     height: auto;
     padding: 5px 15px 5px 15px;
-    white-space:nowrap;
+    white-space: nowrap;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -95,49 +96,21 @@ h1 {
     align-content: flex-start;
     align-items: baseline;
     margin-top: 5px;
+    margin-bottom: 15px;
 }
-.maaltijdtype {
+.info-box {
     background-color: #bdc3c7;
     border-radius: 20px;
     width: auto;
     height: auto;
     padding: 5px 15px 5px 15px;
-    white-space:nowrap;
+    white-space: nowrap;
     margin-left: 5px;
     margin-right: 5px;
 }
-.Bereidingstijd {
-    background-color: #bdc3c7;
-    border-radius: 20px;
-    width: auto;
-    height: auto;
-    padding: 5px 15px 5px 15px;
-    white-space:nowrap;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.Moeilijkheid {
-    background-color: #bdc3c7;
-    border-radius: 20px;
-    width: auto;
-    height: auto;
-    padding: 5px 15px 5px 15px;
-    white-space:nowrap;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.Personen {
-    background-color: #bdc3c7;
-    border-radius: 20px;
-    width: auto;
-    height: auto;
-    padding: 5px 15px 5px 15px;
-    white-space:nowrap;
-    margin-left: 5px;
-    margin-right: 5px;
-}
+
 .title h1 {
-    align-self:flex-start;
+    align-self: flex-start;
 }
 
 .scrollmenu-div {
@@ -146,76 +119,64 @@ h1 {
     flex-direction: column;
     align-content: center;
     align-items: baseline;
-
 }
 
 .scrollmenu-title {
     font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.blue-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin-bottom: 15px;
 }
 
 .bereiding-div {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
     align-items: baseline;
-    overflow: hidden;
-    background-color: #DCF2F1;
+
+    background-color: #dcf2f1;
     border-radius: 20px;
     width: 100%;
     height: min-content;
-    padding: 15px ;
-    white-space:nowrap;
-    margin-bottom: 15px;
-    margin-left: 25px;
+    padding: 15px;
 }
 
-.recept-image {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: baseline;
+.bereiding-div p {
+    text-align: left;
 }
-
 
 .bereiding-title {
     font-size: 22px;
-}
-.bereiding {
-    overflow: auto;
-    white-space: nowrap;
-}
-.bereiding p {  
-    display: inline-block;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .review-div {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: baseline; 
+    align-items: baseline;
     overflow: hidden;
-    background-color: #DCF2F1;
+    background-color: #dcf2f1;
     border-radius: 20px;
     width: 100%;
     height: min-content;
-    padding: 15px ;
-    white-space:nowrap;
-    margin-bottom: 15px;
-    margin-left: 25px;
+    padding: 15px;
+    white-space: nowrap;
+
 }
 
-.review-title{
-    font-size:22px;
+.review-title {
+    font-size: 22px;
 }
 
 .review {
     overflow: auto;
     white-space: nowrap;
 }
-.review p {  
+.review p {
     display: inline-block;
     text-align: center;
     padding: 14px;

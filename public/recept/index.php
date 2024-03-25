@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
-<body> 
+<body>
     <div class="wrapper">
         <?php require("../header.php");
         if (!isset($_GET["recept"])) { ?>
@@ -39,23 +39,20 @@
                     </div>
                 </div>
                 <div class="info">
-                    <div class="maaltijdtype">
+                    <div class="info-box">
                         <p> <?php echo $type["Maaltijdtype"]; ?> </p>
                     </div>
-                    <div class="Bereidingstijd">
+                    <div class="info-box">
                         <p> <?php echo $recept_info["Berijdingstijd"]; ?>min </p>
                     </div>
-                    <div class="Moeilijkheid">
+                    <div class="info-box">
                         <p> Moeilijkheid: <?php echo $recept_info["Moeilijkheid"]; ?>/5 </p>
                     </div>
-                    <div class="Personen">
+                    <div class="info-box">
                         <p> Aantal personen: <?php echo $recept_info["Personen"]; ?> </p>
                     </div>
                 </div>
-                <div class="ingr-tags-image">
-                    <div class="recept-image">
-                        <img class="image" src="/black-cake-2.jpg" alt="dit is een test foto" />
-                    </div>
+                <div class="ingr-tags-div">
                     <div class="ingr-tags">
                         <div class="scrollmenu-div">
                             <p class="scrollmenu-title">Tags</p>
@@ -79,15 +76,18 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="blue-box">
                 <div class="bereiding-div">
+                    <img class="image" src="/black-cake-2.jpg" alt="dit is een test foto" />
                     <p class="bereiding-title">Bereiding</p>
-                    <div class="bereiding">
-                        <p>
-                            <?php echo $recept_info["Bereiding"]; ?>
-                        </p>
-                    </div>
+
+                    <p>
+                        <?php echo str_replace("\n", "<br>", $recept_info["Bereiding"]); ?>
+                    </p>
+
                 </div>
+                </div>
+                <div class="blue-box">
                 <div class="review-div">
                     <p class="review-title">Reviews</p>
                     <div class="review">
@@ -95,6 +95,7 @@
 
                         </p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
