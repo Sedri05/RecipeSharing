@@ -17,7 +17,20 @@
         <div class="content">
 
             <h3 class="par1">Het populairste recept:</h3>
-            <img class="foto1" src="/pasta-met-zalm-1.jpg" alt="een foto">
+            <?php
+            require_once "../private/database.php";
+            $database = new Database();
+            $recepten = $database ->select("SELECT `ReceptID`, `Title`, `Moeilijkheid`, `Foto`, `Date` FROM `recept` ORDER by Date DESC;");
+            foreach ($recepten as $recept) {
+            ?>
+            <div class="recept-row">
+                <a href="/recept/?recept= <?php echo $recept["ReceptID"] ?>"><img class="foto1" src="/pasta-met-zalm-1.jpg" alt="een foto"> </a>
+                <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
+            </div>
+            <?php
+            }
+            ?>
+            
             <?php if (isset($_SESSION["logged_in"])) { ?>
                 <p> You are logged in</p>
             <?php } ?>
