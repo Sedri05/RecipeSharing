@@ -17,7 +17,7 @@
         <div class="content">
 
             <h3 class="par1">Het populairste recept:</h3>
-            <img class="foto1" src="" alt="een foto">
+            <img class="foto1" src="/pasta-met-zalm-1.jpg" alt="een foto">
             <?php if (isset($_SESSION["logged_in"])) { ?>
                 <p> You are logged in</p>
             <?php } ?>
