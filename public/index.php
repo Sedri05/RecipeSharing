@@ -16,7 +16,7 @@
 
         <div class="content">
 
-            <h3 class="par1">Het populairste recept:</h3>
+            <h3 class="par1">Het recente recepten:</h3>
             <?php
             require_once "../private/database.php";
             $database = new Database();
