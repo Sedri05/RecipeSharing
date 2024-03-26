@@ -30,15 +30,14 @@ footer div{
 }
 .footer-nav a {
     display: block;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-left: 325px;
+    margin-right: 25px;
+    margin-left: 350px;
     white-space: nowrap;
     display: block;
     color: white;
     text-decoration: none;
     text-align:center;
-    padding-top: 15px;
+    margin-top: 15px;
     transition: 0.5s;
 }
 .footer-nav a:hover {
