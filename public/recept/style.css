@@ -46,6 +46,8 @@
     overflow: scroll;
     text-align: start;
     padding-bottom: 15px;
+    overflow-y: hidden;
+    overflow: auto;
 }
 
 .scrollmenu p {
