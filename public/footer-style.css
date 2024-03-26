@@ -5,6 +5,11 @@ body {
     font-family: arial;
 }
 
+h3 {
+    font-size: 125%;
+    font-weight: bold;
+}
+
 body footer {
     margin-top: auto;
 }
