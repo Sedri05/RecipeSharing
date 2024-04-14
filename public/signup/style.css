@@ -5,3 +5,64 @@
     align-items: center;
     /*width: 50%;*/
 }
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCF2F1;
+    border: 2px solid #365486;
+    box-shadow: 1px 1px 2px rgb(4, 1, 29);
+    border-radius: 30px;
+    padding: 15px;
+    margin: 50px 0px;
+}
+
+.FirstName {
+    font-weight: bold;
+}
+
+.LastName {
+    font-weight: bold;
+}
+
+.Email {
+    font-weight: bold;
+}
+
+.Password {
+    font-weight: bold;
+}
+
+.ConPassword {
+    font-weight: bold;
+}
+
+.text {
+    width: 250px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #365486;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    font-style: italic;
+    transition: .5s ease-out;
+}
+
+.button:hover {
+    background-color: #0F1035;
+    transform: scale(1.05);
+}
