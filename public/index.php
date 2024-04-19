@@ -39,7 +39,7 @@
                 <p> You are logged in</p>
             <?php } ?>
             <h3>Kijk ook</h3>
-
+                <a href="/recept-input/index.php">Recepten toevoegen</a>
             <h3>Snelle recepten</h3>
         </div>
     </div>

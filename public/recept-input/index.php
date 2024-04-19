@@ -21,7 +21,7 @@
 
         <label for="picture">Picture:</label>
         <input type="file" id="picture" name="picture" accept="image/*" required>
-
+        <br>
         <label for="tags">Tags:</label>
         <div class="tag-container" id="tagContainer">
             <input type="text" id="tags" name="tags" class="tagInput">
