@@ -24,8 +24,12 @@
             foreach ($recepten as $recept) {
             ?>
             <div class="recept-row">
-                <a href="/recept/?recept= <?php echo $recept["ReceptID"] ?>"><img class="foto1" src="/pasta-met-zalm-1.jpg" alt="een foto"> </a>
+                <a href="/recept/?recept= <?php echo $recept["ReceptID"] ?>">
+                <div class="column">
+                <img src="/pasta-met-zalm-1.jpg" alt="een foto"></div>
+                </a>
                 <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
+                <p class="moeilijkheid"> <?php echo $recept["Moeilijkheid"] ?> </p>
             </div>
             <?php
             }

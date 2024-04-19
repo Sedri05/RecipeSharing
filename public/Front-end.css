@@ -1,3 +1,18 @@
 img {
     width: 400px;
 }
+
+.foto1 {
+    display: flex;
+    flex-direction: row;
+}
+.recept-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: baseline;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
