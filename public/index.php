@@ -26,8 +26,9 @@
             <div class="recept-row">
                 <a href="/recept/?recept= <?php echo $recept["ReceptID"] ?>">
                 <div class="column">
-                <img src="/pasta-met-zalm-1.jpg" alt="een foto"></div>
+                <img src="<?php echo["Foto"] ?>">
                 </a>
+                </div>
                 <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
                 <p class="moeilijkheid"> <?php echo $recept["Moeilijkheid"] ?> </p>
             </div>
@@ -46,5 +47,4 @@
     <?php require("footer.php") ?>
     
 </body>
-
 </html>
