@@ -64,7 +64,7 @@
                         </div>
                     <div class="bereiding">
                         <label class="label" for="instructions">Bereiding:</label>
-                        <textarea id="instructions" name="instructions" rows="6" required></textarea>
+                        <textarea class="textarea" id="instructions" name="instructions" rows="6" required></textarea>
                     
                         <button class="submitbutton" type="submit">Plaatsen</button>
                     </div>
