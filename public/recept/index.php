@@ -19,7 +19,7 @@
         <?php die();
         }
         require_once "../../private/database.php";
-        $recept_id = $_GET["recept"];
+        $recept_id = intval($_GET["recept"]);
         $database = new Database();
         $recept_info = $database->select_one("SELECT * FROM `recept` WHERE `ReceptID` = ?", ["i", [$recept_id]], false);
         $recept_tags = $database->select("SELECT `Tagname` FROM `tag` t LEFT JOIN `tagsrecept` r ON t.TagID = r.TagID WHERE r.ReceptID = ?", ["i", [$recept_id]], false);
@@ -77,25 +77,25 @@
                     </div>
                 </div>
                 <div class="blue-box">
-                <div class="bereiding-div">
-                    <img class="image" src="/pasta-met-zalm-1.jpg" alt="dit is een test foto" />
-                    <p class="bereiding-title">Bereiding</p>
+                    <div class="bereiding-div">
+                        <img class="image" src="<?php echo $database->get_image($recept_id) ?>" alt="dit is een test foto" />
+                        <p class="bereiding-title">Bereiding</p>
 
-                    <p>
-                        <?php echo str_replace("\n", "<br>", $recept_info["Bereiding"]); ?>
-                    </p>
-
-                </div>
-                </div>
-                <div class="blue-box">
-                <div class="review-div">
-                    <p class="review-title">Reviews</p>
-                    <div class="review">
                         <p>
-
+                            <?php echo str_replace("\n", "<br>", $recept_info["Bereiding"]); ?>
                         </p>
+
                     </div>
                 </div>
+                <div class="blue-box">
+                    <div class="review-div">
+                        <p class="review-title">Reviews</p>
+                        <div class="review">
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
