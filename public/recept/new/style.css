@@ -1,35 +1,113 @@
 .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 20px;
-    }
-    .text, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }    select, .number {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-    .tag-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .tag {
-        background-color: #f0f0f0;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-    }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCF2F1;
+    border: 2px solid #365486;
+    box-shadow: 1px 1px 2px rgb(4, 1, 29);
+    border-radius: 30px;
+    padding: 15px;
+    margin: 50px 0px;
+}
 
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+.formnavigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    padding: 15px;
+}
+.tweededeel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+}
+.bereiding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label {
+    font-weight: bold;
+}
+.file {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.text{
+    width: 250px;
+    height: 30px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+textarea {
+    width: 500px;
+    height: 100px;
+    border-radius: 4px;
+}
+.number {
+    width: 250px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.select1, .text2 {
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.select2 {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.tag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+
+.submitbutton, .button{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #365486;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    font-style: italic;
+    transition: .5s ease-out;
+}
+.submitbutton:hover {
+    background-color: #0F1035;
+    transform: scale(1.05);
+}
 
 h2 {
     margin: 0;
