@@ -141,7 +141,7 @@ class Database
     {
         $salt = explode(".", $hashed)[0];
         $pd_hash = hash_hmac("sha512", $salt . $password, $this->pepper);
-        return $salt.".".$pd_hash === $hashed;
+        return $salt . "." . $pd_hash === $hashed;
     }
 
     function hash_password($password)
@@ -149,6 +149,19 @@ class Database
         $salt = bin2hex(random_bytes(32));
         $pd_hash = hash_hmac("sha512", $salt . $password, $this->pepper);
         return $salt . "." . $pd_hash;
+    }
+
+    function get_image($recept_id)
+    {
+        $img = "balls";
+        $exts = array('bmp', 'png', 'jpg');
+        foreach ($exts as $ext) {
+            //echo $_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext;
+            if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext)) {
+                $img = "/img/" . $recept_id . "." . $ext;
+            }
+        }
+        return $img;
     }
 
     public function print()

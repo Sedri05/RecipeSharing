@@ -24,9 +24,9 @@
             foreach ($recepten as $recept) {
             ?>
             <div class="recept-row">
-                <a href="/recept/?recept= <?php echo $recept["ReceptID"] ?>">
+                <a href="/recept/?recept=<?php echo $recept["ReceptID"] ?>">
                 <div class="column">
-                <img src="<?php echo["Foto"] ?>">
+                <img src="<?php echo $database->get_image($recept["ReceptID"])?>">
                 </a>
                 </div>
                 <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
