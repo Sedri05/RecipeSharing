@@ -7,16 +7,15 @@
     justify-content: center;
 }
 
-
 .action-button {
-    background-color: #DCF2F1  ;
+    background-color: #dcf2f1;
     border: solid #365486 2px;
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin-top: -2px;
-    transition: background-color .5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .text-input {
@@ -27,24 +26,23 @@
     border-radius: 10px;
 }
 
-.submit{
+.submit {
     border: none;
     background-color: #365486;
     color: white;
     padding: 10px 5px 10px 5px;
     border-radius: 10px;
     width: 60%;
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
 }
 
-.submit:hover{
-    background-color: #0F1035;
+.submit:hover {
+    background-color: #0f1035;
     transform: scale(1.05);
 }
 
-.action-button:hover{
-
-    background-color: #7FC7D9 ;
+.action-button:hover {
+    background-color: #7fc7d9;
 
     overflow: hidden;
 }
@@ -73,7 +71,7 @@
 }
 .info {
     height: min-content;
-    background-color: #DCF2F1;
+    background-color: #dcf2f1;
     border: #365486 solid 2px;
     border-radius: 10px;
     padding: 10px;
@@ -91,7 +89,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.info-text:last-child{
+.info-text:last-child {
     margin-bottom: 0;
 }
 
@@ -101,12 +99,12 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .recept-info {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .recept-title {
@@ -118,6 +116,8 @@ h2 {
     color: white;
     padding: 7px;
     margin: 5px;
+    margin-left: 0;
+    margin-right: 5px;
     border-radius: 7px;
 }
 
@@ -130,7 +130,7 @@ h2 {
     border: none;
     border-radius: 10px;
     padding: 10px;
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
 }
 
 .border:hover {
@@ -143,4 +143,14 @@ img {
     width: 250px;
     border-radius: 10px;
     box-shadow: 3px 3px 1 px black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
 }
