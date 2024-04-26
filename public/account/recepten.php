@@ -11,10 +11,10 @@ $recepten = $database->select(
 
 foreach ($recepten as $recept) {
 ?>
-    <div class="info-text border">
+    <a class="info-text border" href="<?php echo "/recept/?recept=" . $recept["ReceptID"] ?>">
         <div>
-        <img src="/black-cake-2.jpg" alt="" srcset="">
-        <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
+            <img src="<?php echo $database->get_image($recept["ReceptID"]) ?>" alt="" srcset="">
+            <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
         </div>
         <div class="recept-info">
             <div class="info-button"> Personen: <?php echo $recept["Personen"] ?> </div>
@@ -22,7 +22,7 @@ foreach ($recepten as $recept) {
             <div class="info-button"> Bereidingstijd: <?php echo $recept["Berijdingstijd"] ?>mins </div>
             <div class="info-button"> Maaltijdtype: <?php echo $recept["Maaltijdtype"] ?> </div>
         </div>
-    </div>
+    </a>
 <?php
 }
 
