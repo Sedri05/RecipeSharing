@@ -5,14 +5,13 @@
         padding-right: 20px;
         padding-bottom: 20px;
     }
-    input[type="text"], textarea {
+    .text, textarea {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
-    }
-    select, input[type="number"] {
+    }    select, .number {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
