@@ -24,6 +24,13 @@
                     <li>Zelf heel gemakkelijk recepten toevoegen</li>
                     <li>Ingrediënten zijn globaal opgeslagen dus je kan recepten zoeken op welke ingrediënten je hebt.</li>
                     <li>Tags om recepten te vinden gesorteerd per categorie.</li>
+                    <li>Door recepten aan je favorieten toe te voegen kan je ze opslagen voor later.</li>
+                </ul>
+                <h2>Het team</h2>
+                <ul>
+                    <li>Senne De Vriendt</li>
+                    <li>Szymon Bartus</li>
+                    <li>Bram Ryckmans</li>
                 </ul>
             </div>
         </div>
