@@ -12,25 +12,25 @@
 
 <body>
     <div class="wrapper">
-        <?php require("../header.php")?>
+        <?php require("../../header.php")?>
         <div class="container">
         <h2>Nieuw recept maken:</h2>
         <form id="recipeForm">
             <label for="title">Titel:</label>
             <input id="title" name="title" required>
-
+            <br>
             <label for="picture">Voeg een foto toe:</label>
-            <input id="picture" name="picture" accept="image/*" required>
+            <input type="file" id="picture" name="picture" accept="image/*" required>
             <br>
             <label for="tags">Tags:</label>
             <div class="tag-container" id="tagContainer">
-                <input type="text" id="tags" name="tags" class="tagInput">
+                <input class="text" type="text" id="tags" name="tags" class="tagInput">
             </div>
             <button type="button" onclick="addTag()">Tag toevoegen</button>
 
             <label for="ingredients">Ingrediënten :</label>
             <div class="tag-container" id="ingredientContainer">
-                <input type="text" id="ingredients" name="ingredients" class="tagInput">
+                <input class="text" type="text" id="ingredients" name="ingredients" class="tagInput">
             </div>
             <button type="button" onclick="addIngredient()">ingrediënt toevoegen</button>
 
@@ -48,19 +48,19 @@
             </select>
 
             <label for="prepTime">Bereidingstijd (Min):</label>
-            <input type="number" id="prepTime" name="prepTime" min="0" required>
+            <input class="number" type="number" id="prepTime" name="prepTime" min="0" required>
 
             <label for="difficulty">Moeijlijkheid (1-5):</label>
-            <input type="number" id="difficulty" name="difficulty" min="1" max="5" required>
+            <input class="number" type="number" id="difficulty" name="difficulty" min="1" max="5" required>
 
             <label for="servings">Aantal personen:</label>
-            <input type="number" id="servings" name="servings" min="1" required>
+            <input class="number" type="number" id="servings" name="servings" min="1" required>
 
             <button type="submit">Plaatsen</button>
         </form>
     </div>
     <?php
-    require("../footer.php")
+    require("../../footer.php")
     ?>
 </body>
 
