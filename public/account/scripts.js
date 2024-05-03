@@ -37,7 +37,6 @@ function updateInfo(form) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-            console.log(this.responseText);
             var res = JSON.parse(this.responseText);
             if (res.success !== undefined) {
                 document.getElementById("verander").removeAttribute("selected");
@@ -75,4 +74,25 @@ function checkPassword() {
         document.getElementById("confirm_password_error").innerHTML = "";
         return true;
     }
+}
+
+
+function verwijderAccount(){
+    console.log("hi");
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+            console.log(this.responseText);
+            var res = JSON.parse(this.responseText);
+            if (res.success !== undefined) {
+                window.location.href = "/";
+            } else {
+                document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
+            }
+        }
+    }
+    event.preventDefault();
+    xmlhttp.open("POST", "verwijderAccount.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send();
 }

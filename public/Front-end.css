@@ -17,14 +17,18 @@ img:hover {
     width: 25%;
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
-    align-items: baseline;
+
     margin-top: 5px;
     margin-bottom: 15px;
 }
 
 .par1 {
     margin-top: 10px;
+}
+
+.recept-info-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .recept-info-title {

@@ -23,6 +23,3 @@ $email = $masked_local_part . "@" . $email_parts[1];
     <h2> Join Date </h2>
     <p> <?php echo date_format(date_create($user["Joindate"]), "F jS Y H:i:s") ?> </p>
 </div>
-<div class="info-text">
-    <p> WOW</p>
-</div>

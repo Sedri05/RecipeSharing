@@ -30,8 +30,11 @@
                     </div>
                 </a>
                 
-                <h2 class="recept-info-title"> <?php echo $recept["Title"] ?> </h2>
-                <p class="recept-info"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?> </p>
+                <div class="recept-info-column">
+                    <h2 class="recept-info-title"> <?php echo $recept["Title"] ?> </h2>
+                    <p class="recept-info"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?> </p>
+                </div>
+                
             </div>
             <?php
             }
