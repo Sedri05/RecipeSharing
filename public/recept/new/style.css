@@ -15,6 +15,10 @@
     padding: 15px;
     margin: 50px 0px;
 }
+form {
+    display: flex;
+    flex-direction: column;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -112,4 +116,12 @@ h2 {
 label {
     margin: 0;
     padding-bottom: 5px;
+}
+
+.error {
+    display: none;
+    align-self: center;
+    color:red;
+    font-weight: bold;
+    font-size: 150%;
 }
