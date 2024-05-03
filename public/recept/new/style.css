@@ -119,8 +119,8 @@ label {
 }
 
 .error {
-    display: none;
-    align-self: center;
+    display:none;
+    align-self:center;
     color:red;
     font-weight: bold;
     font-size: 150%;

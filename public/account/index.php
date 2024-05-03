@@ -36,7 +36,7 @@
                 <button class="action-button" id="verander" onclick="getAction('veranderInformatie', this)">Verander informatie</button>
                 <button class="action-button" id="recepten" onclick="getAction('recepten', this)">Mijn recepten</button>
                 <button class="action-button" id="favorieten" onclick="getAction('favorieten', this)">Favorieten</button>
-                <button class="action-button" id="delete" onclick="getAction('veranderInformatie', this)">Verwijder Account</button>
+                <button class="action-button" id="delete" onclick="getAction('verwijderAccount', this)">Verwijder Account</button>
                 <button class="action-button" id="logout" onclick="logout()">Log Out</button>
             </div>
             <div class="info" id="info">

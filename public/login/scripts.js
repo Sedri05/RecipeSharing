@@ -8,7 +8,7 @@ function login() {
             console.log(this.responseText);
             try {
                 var res = JSON.parse(this.responseText);
-            } catch (error){
+            } catch (error) {
                 document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
                 return;
             }
@@ -20,23 +20,19 @@ function login() {
 
                 switch (err_result) {
                     case "email_not_set":
-                        document.getElementById("email_error").innerHTML =
-                            "No email given";
+                        document.getElementById("email_error").innerHTML = "No email given";
                         break;
 
                     case "email_incorrect":
-                        document.getElementById("email_error").innerHTML =
-                            "E-mail is incorrect";
+                        document.getElementById("email_error").innerHTML = "E-mail is incorrect";
                         break;
 
                     case "password_not_set":
-                        document.getElementById("password_error").innerHTML =
-                            "No password given";
+                        document.getElementById("password_error").innerHTML = "No password given";
                         break;
 
                     case "password_incorrect":
-                        document.getElementById("password_error").innerHTML =
-                            "Password is incorrect";
+                        document.getElementById("password_error").innerHTML = "Password is incorrect";
                         break;
                 }
             } else {
@@ -45,9 +41,6 @@ function login() {
         }
     };
     xmlhttp.open("POST", "login.php", true);
-    xmlhttp.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
-    );
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("email=" + username + "&password=" + password);
 }
