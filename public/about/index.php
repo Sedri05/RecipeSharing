@@ -29,8 +29,23 @@
                 <h2>Het team</h2>
                 <ul>
                     <li>Senne De Vriendt</li>
+                    <ul>
+                        <li>Secundair diploma: Industriële ICT</li>
+                        <li>Richting: Application Development</li>
+                        <li>E-mail: sennedevriendt@telenet.be</li>
+                    </ul>
                     <li>Szymon Bartus</li>
+                    <ul>
+                        <li>Secundair diploma:Industriële Wetenschappen</li>
+                        <li>Richting: Application Development</li>
+                        <li>E-mail: szymon.bartus04@hotmail.com</li>
+                    </ul>
                     <li>Bram Ryckmans</li>
+                    <ul>
+                        <li>Secundair diploma:Industriële Wetenschappen</li>
+                        <li>Richting: Security, Systems & Services</li>
+                        <li>E-mail: bram.ryckmans@gmail.com</li>
+                    </ul>
                 </ul>
             </div>
         </div>

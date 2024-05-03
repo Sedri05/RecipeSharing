@@ -29,4 +29,9 @@ h2 {
 ul {
     margin-left: 10px;
     list-style-type: disc;
+    padding-bottom: 5px;
+}
+
+ul ul {
+    list-style-type: square;
 }
