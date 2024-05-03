@@ -1,3 +1,8 @@
+.par1 {
+    margin: 30px;
+    font-size: 30px;
+}
+
 .center {
     display: flex;
     flex-direction: column;
@@ -11,7 +16,7 @@
     background-color: #dcf2f1;
     padding: 15px;
     border-radius: 20px;
-    width: fit-content;
+    width: 75%;
 }
 
 img {
@@ -24,10 +29,6 @@ img {
 img:hover {
     box-shadow: 1px 1px 1px 1px black;
     transform: scale(1.005);
-}
-
-.par1 {
-    margin-top: 10px;
 }
 
 .recept-info-column {
