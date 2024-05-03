@@ -7,8 +7,7 @@
     padding: 15px;
     border-radius: 20px;
     width: fit-content;
-    justify-content: center;
-    align-content: center;
+    justify-items: center;
 }
 
 img {
@@ -35,7 +34,6 @@ img:hover {
 .recept-info-title {
     margin: 5px;
     font-size: 30px;
-    background-color: #7FC7D9;
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;
@@ -43,7 +41,7 @@ img:hover {
 
 .recept-info {
     margin: 5px;
-    background-color: #7FC7D9;
+    background-color: #bdc3c7;
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;

@@ -20,7 +20,9 @@
             <?php
             require_once "../private/database.php";
             $database = new Database();
+  
             $recepten = $database ->select("SELECT `ReceptID`, `Title`, `Moeilijkheid`, `Foto`, `Date` FROM `recept` ORDER by Date DESC;");
+        
             foreach ($recepten as $recept) {
             ?>
             <div class="recept-row">
