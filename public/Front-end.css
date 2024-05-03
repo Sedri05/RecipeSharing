@@ -1,5 +1,18 @@
+.recept-row {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    margin: 15px;
+    background-color: #dcf2f1;
+    padding: 15px;
+    border-radius: 20px;
+    width: fit-content;
+    justify-content: center;
+    align-content: center;
+}
+
 img {
-    margin: 10px;
+    margin: 5px;
     width: 400px;
     border-radius: 10px;
     transition: 0.5s ease-out;
@@ -8,18 +21,6 @@ img {
 img:hover {
     box-shadow: 1px 1px 1px 1px black;
     transform: scale(1.005);
-}
-
-.recept-row {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 5px;
-    margin-bottom: 15px;
 }
 
 .par1 {
@@ -46,4 +47,5 @@ img:hover {
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;
+    width: fit-content;
 }
