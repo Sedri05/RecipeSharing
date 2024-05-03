@@ -1,13 +1,17 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
 .recept-row {
     display: flex;
-    flex-direction: row;
     flex-direction: row;
     margin: 15px;
     background-color: #dcf2f1;
     padding: 15px;
     border-radius: 20px;
     width: fit-content;
-    justify-items: center;
 }
 
 img {
