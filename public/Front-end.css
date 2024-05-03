@@ -1,5 +1,13 @@
 img {
+    margin: 10px;
     width: 400px;
+    border-radius: 10px;
+    transition: 0.5s ease-out;
+}
+
+img:hover {
+    box-shadow: 1px 1px 1px 1px black;
+    transform: scale(1.005);
 }
 
 .recept-row {
@@ -13,4 +21,8 @@ img {
     align-items: baseline;
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.par1 {
+    margin-top: 10px;
 }
