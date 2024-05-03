@@ -16,7 +16,7 @@
 
         <div class="content">
 
-            <h3 class="par1">Het recente recepten:</h3>
+            <h3 class="par1">Recente recepten:</h3>
             <?php
             require_once "../private/database.php";
             $database = new Database();
@@ -25,12 +25,13 @@
             ?>
             <div class="recept-row">
                 <a href="/recept/?recept=<?php echo $recept["ReceptID"] ?>">
-                <div class="column">
-                <img src="<?php echo $database->get_image($recept["ReceptID"])?>">
+                    <div class="column">
+                        <img src="<?php echo $database->get_image($recept["ReceptID"])?>">
+                    </div>
                 </a>
-                </div>
-                <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
-                <p class="moeilijkheid"> <?php echo $recept["Moeilijkheid"] ?> </p>
+                
+                <h2 class="recept-info-title"> <?php echo $recept["Title"] ?> </h2>
+                <p class="recept-info"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?> </p>
             </div>
             <?php
             }
@@ -39,9 +40,7 @@
             <?php if (isset($_SESSION["logged_in"])) { ?>
                 <p> You are logged in</p>
             <?php } ?>
-            <h3>Kijk ook</h3>
                 <a href="/recept/new/index.php">Recepten toevoegen</a>
-            <h3>Snelle recepten</h3>
         </div>
     </div>
     <?php require("footer.php") ?>
