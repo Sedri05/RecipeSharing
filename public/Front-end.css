@@ -26,3 +26,20 @@ img:hover {
 .par1 {
     margin-top: 10px;
 }
+
+.recept-info-title {
+    margin: 5px;
+    font-size: 30px;
+    background-color: #7FC7D9;
+    padding: 5px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+}
+
+.recept-info {
+    margin: 5px;
+    background-color: #7FC7D9;
+    padding: 5px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+}

@@ -25,12 +25,13 @@
             ?>
             <div class="recept-row">
                 <a href="/recept/?recept=<?php echo $recept["ReceptID"] ?>">
-                <div class="column">
-                <img src="<?php echo $database->get_image($recept["ReceptID"])?>">
+                    <div class="column">
+                        <img src="<?php echo $database->get_image($recept["ReceptID"])?>">
+                    </div>
                 </a>
-                </div>
-                <h2 class="recept-title"> <?php echo $recept["Title"] ?> </h2>
-                <p class="moeilijkheid"> <?php echo $recept["Moeilijkheid"] ?> </p>
+                
+                <h2 class="recept-info-title"> <?php echo $recept["Title"] ?> </h2>
+                <p class="recept-info"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?> </p>
             </div>
             <?php
             }
