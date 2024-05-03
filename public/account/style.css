@@ -154,3 +154,38 @@ a:visited {
     text-decoration: none;
     color: black;
 }
+
+.delete-submit {
+    font-size: 2vw;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 5px 10px 5px;
+    border-radius: 10px;
+    width: 60%;
+    transition: 0.5s ease-out;
+}
+
+.delete-submit:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.delete-p{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.delete-h2 {
+    font-size: 2vw;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}

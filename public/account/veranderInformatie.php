@@ -72,8 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ["sssi", [$naam, $achternaam, $email, $user]]
     );
     echo json_encode(array("success"=>"success"));
-} else {
 
+} else {
+    
     $user = $database->select_one("SELECT `GebruikerID`, `Naam`, `Achternaam`, `Email`, `Joindate` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$user]]);
 
     $email_parts = explode("@", $user["Email"]);
