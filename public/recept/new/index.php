@@ -23,7 +23,7 @@
         <div class="container">
             <div class="navigation">
                 <h2>Nieuw recept maken:</h2>
-                <form id="recipeForm" onsubmit="required()">
+                <form id="recipeForm" onsubmit="required()" method="post">
                     <p class="error" id="error">Er is een verplichte vak is niet ingevuld!!</p>
                         <div class="row">
                             <div class="formnavigation">
