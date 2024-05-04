@@ -43,10 +43,6 @@
             <?php
             }
             ?>
-            
-            <?php if (isset($_SESSION["logged_in"])) { ?>
-                <p> You are logged in</p>
-            <?php } ?>
                 <a href="/recept/new/index.php">Recepten toevoegen</a>
         </div>
     </div>
