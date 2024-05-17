@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .content {
     height: min-content;
     background-color: #DCF2F1;
@@ -6,12 +12,6 @@
     padding: 10px;
     width: 87%;
     margin: 15px;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 h1 {
