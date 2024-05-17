@@ -55,7 +55,7 @@ class Database
             $stmt = $this->executeStatement($query, $params);
             $stmt->close();
 
-            return true;
+            return mysqli_insert_id($this->conn);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         } finally {
