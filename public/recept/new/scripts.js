@@ -31,6 +31,8 @@ function required(){
     }
     return true;
 }
+
+
 function addNew(){
     var title = document.getElementById("title");
     var picture = document.getElementById("picture");
@@ -45,5 +47,6 @@ function addNew(){
     
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "new.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("title=" + title + "&picture=" + picture + "&mealType=" + mealtype + "&prepTime" + preptime + "&servings=" + servings + "&bereiding=" + bereiding);
 }

@@ -25,7 +25,7 @@
         <div class="container">
             <div class="navigation">
                 <h2>Nieuw recept maken:</h2>
-                <form id="recipeForm" onsubmit="required()" method="post">
+                <form id="recipeForm" action="new.php" method="post" enctype="multipart/form-data">
                     <p class="error" id="error">Er is een verplichte vak is niet ingevuld!!</p>
                         <div class="row">
                             <div class="formnavigation">
@@ -49,12 +49,12 @@
                                 <label class="label" for="mealType">Maaltijdtype:</label>
                                 <select class="select1" id="mealType" name="mealType">
                                     <option value=""></option>
-                                    <option value="ontbijt">Ontbijt</option>
-                                    <option value="avondmaal">Avondmaal</option>
-                                    <option value="dessert">Dessert</option>
-                                    <option value="middagmaal">Middagmaal</option>
-                                    <option value="snack">Snack</option>
-                                    <option value="voorgerecht">Voorgerecht</option>
+                                    <option value="1">Ontbijt</option>
+                                    <option value="3">Avondmaal</option>
+                                    <option value="5">Dessert</option>
+                                    <option value="2">Middagmaal</option>
+                                    <option value="4">Snack</option>
+                                    <option value="6">Voorgerecht</option>
                                 </select>
 
                                 <label class="label" for="prepTime">Bereidingstijd (Min):</label>
