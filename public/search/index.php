@@ -27,7 +27,7 @@
         }
         require_once("../../private/database.php");
         $database = new Database();
-        $data = $database->select("SELECT ReceptID, Title, Personen FROM recept", [], false);
+        $data = $database->select("SELECT ReceptID, Title, Bereiding, Personen FROM recept", [], false);
         $tags = $database->select("SELECT tr.ReceptID, t.Tagname FROM tagsrecept tr LEFT JOIN tag t ON tr.TagID = t.TagID", [], false);
         $ingredients = $database->select("SELECT tr.ReceptID, t.Ingredient FROM ingredientrecept tr LEFT JOIN ingredient t ON tr.IngredientID = t.IngredientID; ");
         $result = [];
@@ -69,7 +69,11 @@
         <h1 class="search-title">Search Results for: <?php echo $search_str ?></h1>
         <?php
         foreach ($distances as $recept) {
-            echo "<p> Title: " . $recept[0]["Title"] . "</p>";
+          echo "<div class = 'result'>
+          <p> Title: " . $recept[0]["Title"] . "
+          </p>
+          <p> ".$recept[0]["Bereiding"]."</p>
+          </div>";
         }
         ?>
     </div>

@@ -17,3 +17,19 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.search-title{
+    align-self: center;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.result {
+    margin: 10px 0px;
+    margin-left: 10px;
+    margin-right: auto;
+    padding: 5px;
+    background-color: #365486;
+    color: #fff;
+}
