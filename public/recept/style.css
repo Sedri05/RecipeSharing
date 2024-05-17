@@ -73,14 +73,9 @@ h1 {
     align-content: center;
     align-items: baseline;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
-.title {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: baseline;
-}
+
 .creator {
     background-color: #bdc3c7;
     border-radius: 20px;
@@ -97,21 +92,32 @@ h1 {
     flex-direction: row;
     align-content: flex-start;
     align-items: baseline;
-    margin-top: 5px;
     margin-bottom: 15px;
 }
 .info-box {
     background-color: #bdc3c7;
     border-radius: 20px;
-    width: auto;
     height: auto;
+    width: auto;
     padding: 5px 15px 5px 15px;
     white-space: nowrap;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.title h1 {
+.info-icon {
+    margin-left: auto;
+    background-color: #bdc3c7;
+    border-radius: 1000px;
+    height: 16px;
+    width: 16px;
+    padding: 5px 5px 5px 5px;
+    white-space: nowrap;
+    display: block;
+}
+
+
+.title-div h1 {
     align-self: flex-start;
 }
 
@@ -174,13 +180,53 @@ h1 {
     font-size: 22px;
 }
 
-.review {
-    overflow: auto;
-    white-space: nowrap;
+.right {
+    margin-left: auto;
+    margin-right: 0;
 }
-.review p {
+
+.fixed {
     display: inline-block;
+    font-family: 'Material Symbols Outlined';
+    font-size: 28px;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 3px;
     text-align: center;
-    padding: 14px;
+    left: 0.5px;
+}
+
+.favorite {
+    margin-left: auto;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    background-color: #bdc3c7;
+    border-radius: 1000px;
+}
+
+.review {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-review {
+    box-sizing:border-box;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    display: block;
+
+}
+
+.review-user {
     text-decoration: none;
+    text-align: left;
+    font-size: 110%;
 }

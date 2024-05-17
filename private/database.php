@@ -81,6 +81,22 @@ class Database
         return false;
     }
 
+    function delete(string $query, $params = [], $close = true)
+    {
+        try {
+            $stmt = $this->executeStatement($query, $params);
+            $stmt->close();
+
+            return true;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        } finally {
+            if ($close)
+                $this->close();
+        }
+        return false;
+    }
+
     function select(string $query, array $params = [], $close = true)
     {
         try {
