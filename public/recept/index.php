@@ -109,7 +109,7 @@
                             <?php 
                             foreach($reviews as $review){ ?>
                             <div class="user-review">
-                                <h3 class="review-user"><?php echo $review["Naam"] . " " . $review["Achternaam"] . " - " . $review["Score"] . "/5" ?></h3>
+                                <h3 class="review-user"><?php echo $review["Naam"] . " " . $review["Achternaam"] . " - " . $review["Score"] . "/5" . " " . $review["Date"]?></h3>
                                 <p class="review-text"><?php echo $review["Reviewtekst"]?></p>
                             </div>
                             <?php } ?>

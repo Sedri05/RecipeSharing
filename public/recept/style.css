@@ -209,7 +209,7 @@ h1 {
 .review {
     text-align: left;
     overflow: hidden;
-    width: 100%;
+    min-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -219,7 +219,7 @@ h1 {
     box-sizing:border-box;
     margin: 10px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: white;
     display: block;
 
