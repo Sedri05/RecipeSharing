@@ -20,6 +20,8 @@
             die();
         }
         ?>
+        <? require ("/new.php");
+        ?>
         <div class="container">
             <div class="navigation">
                 <h2>Nieuw recept maken:</h2>
@@ -76,7 +78,7 @@
                             <label class="label" for="instructions">Bereiding:</label>
                             <textarea class="textarea" id="instructions" name="instructions" rows="6"></textarea>
 
-                            <button class="submitbutton" type="submit">Plaatsen</button>
+                            <button class="submitbutton" onclick="addNew()" type="submit">Plaatsen</button>
                         </div>
                 </form>
             </div>
