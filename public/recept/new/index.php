@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,17 @@
 
 <body>
     <div class="wrapper">
-        <?php require("../../header.php")?>
+        <?php require ("../../header.php");
+        if (!isset($_SESSION["logged_in"])) { ?>
+        <p> You are not logged in. Click <a href="../login/">Here</a> to log in.</p>
+        <?php
+            die();
+        }
+        ?>
         <div class="container">
             <div class="navigation">
                 <h2>Nieuw recept maken:</h2>
-                <form id="recipeForm" onsubmit="return required()">
+                <form id="recipeForm" onsubmit="required()" method="post">
                     <p class="error" id="error">Er is een verplichte vak is niet ingevuld!!</p>
                         <div class="row">
                             <div class="formnavigation">
@@ -65,18 +72,19 @@
                                 <input class="text2" type="number" id="servings" name="servings" min="1">
                             </div>
                         </div>
-                    <div class="bereiding">
-                        <label class="label" for="instructions">Bereiding:</label>
-                        <textarea class="textarea" id="instructions" name="instructions" rows="6"></textarea>
-                    
-                        <button class="submitbutton" type="submit">Plaatsen</button>
-                    </div>
+                        <div class="bereiding">
+                            <label class="label" for="instructions">Bereiding:</label>
+                            <textarea class="textarea" id="instructions" name="instructions" rows="6"></textarea>
+
+                            <button class="submitbutton" type="submit">Plaatsen</button>
+                        </div>
                 </form>
             </div>
         </div>
     </div>
     <?php
-    require("../../footer.php")
-    ?>
+    require ("../../footer.php")
+        ?>
 </body>
+
 </html>

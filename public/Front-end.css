@@ -1,5 +1,26 @@
+.par1 {
+    margin: 30px;
+    font-size: 30px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.recept-row {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    background-color: #dcf2f1;
+    padding: 15px;
+    border-radius: 20px;
+    width: 75%;
+}
+
 img {
-    margin: 10px;
+    margin: 5px;
     width: 400px;
     border-radius: 10px;
     transition: 0.5s ease-out;
@@ -10,22 +31,6 @@ img:hover {
     transform: scale(1.005);
 }
 
-.recept-row {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-.par1 {
-    margin-top: 10px;
-}
-
 .recept-info-column {
     display: flex;
     flex-direction: column;
@@ -34,7 +39,6 @@ img:hover {
 .recept-info-title {
     margin: 5px;
     font-size: 30px;
-    background-color: #7FC7D9;
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;
@@ -42,8 +46,9 @@ img:hover {
 
 .recept-info {
     margin: 5px;
-    background-color: #7FC7D9;
+    background-color: #bdc3c7;
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;
+    width: fit-content;
 }

@@ -97,11 +97,9 @@
                     <div class="bereiding-div">
                         <img class="image" src="<?php echo $database->get_image($recept_id) ?>" alt="dit is een test foto" />
                         <p class="bereiding-title">Bereiding</p>
-
                         <p>
                             <?php echo str_replace("\n", "<br>", $recept_info["Bereiding"]); ?>
                         </p>
-
                     </div>
                 </div>
                 <div class="blue-box">
@@ -123,5 +121,4 @@
     </div>
     <?php require("../footer.php"); ?>
 </body>
-
 </html>

@@ -13,18 +13,20 @@ function addIngredient() {
 }
 
 function required(){
-    var title = getElementById("title");
-    var picture = getElementById("picture");
-    var tags = getElementById("tags");
-    var ingredients =getElementById("ingredients");
-    var mealtype = getElementById("mealType");
-    var preptime = getElementById("prepTime");
-    var servings = getElementById("servings");
-    var instructions =getElementById("instructions");
+    event.preventDefault();
+    var title = document.getElementById("title");
+    var picture = document.getElementById("picture");
+    var tags = document.getElementById("tags");
+    var ingredients = document.getElementById("ingredients");
+    var mealtype = document.getElementById("mealType");
+    var preptime = document.getElementById("prepTime");
+    var servings = document.getElementById("servings");
+    var instructions = document.getElementById("instructions");
 
-    if(title.value=="" || picture.value=="" || tags.value=="" || ingredients.value=="" || mealtype.value=="" || preptime.value=="" || servings.value=="" || instructions.value=="")
+    if(title.value == "" || picture.value == "" || tags.value == "" || ingredients.value == "" || mealtype.value == "" || preptime.value == "" || servings.value == "" || instructions.value == "")
     {
         document.getElementById("error").style.display = "flex";
+        globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         return false;
     }
     return true;
