@@ -30,7 +30,7 @@
         $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]], false);
         $type = $database->select_one("SELECT `Maaltijdtype` FROM `maaltijdtype` WHERE `MaaltijdtypeID` = ?;", ["i", [$recept_info["MaaltijdtypeID"]]]);
         $reviews = $database->select("SELECT `ReviewID`, g.Naam, g.Achternaam, `Score`, `Reviewtekst`, `Date` FROM `review` r LEFT JOIN `gebruiker` g ON r.GebruikerID = g.GebruikerID WHERE `ReceptID` = ? ORDER BY `Date`", ["i", [$recept_id]]);
-        
+
         $favoriet = false;
         if (isset($_SESSION["logged_in"])) {
             $temp = $database->select("SELECT `ReceptID`, `GebruikerID` FROM `favoriet` WHERE `ReceptID` = ? AND `GebruikerID` = ?", ["ii", [$recept_id, $_SESSION["user"]]]);
@@ -106,12 +106,17 @@
                     <div class="review-div">
                         <p class="review-title">Reviews</p>
                         <div class="review">
-                            <?php 
-                            foreach($reviews as $review){ ?>
-                            <div class="user-review">
-                                <h3 class="review-user"><?php echo $review["Naam"] . " " . $review["Achternaam"] . " - " . $review["Score"] . "/5" . " " . $review["Date"]?></h3>
-                                <p class="review-text"><?php echo $review["Reviewtekst"]?></p>
-                            </div>
+                            <?php
+                            foreach ($reviews as $review) { ?>
+                                <div class="review-content">
+                                    <h3 class="review-user"><?php echo $review["Naam"] . " " . $review["Achternaam"] ?></h3>
+                                    <div class="review-info">
+                                        <p><?php echo $review["Score"] . "/5 " ?></p>
+                                        
+                                        <p><?php echo $review["Date"] ?></p>
+                                    </div>
+                                    <p class="review-text"><?php echo $review["Reviewtekst"] ?></p>
+                                </div>
                             <?php } ?>
                         </div>
                     </div>
@@ -121,4 +126,5 @@
     </div>
     <?php require("../footer.php"); ?>
 </body>
+
 </html>
