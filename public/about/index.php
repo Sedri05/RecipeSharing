@@ -17,7 +17,7 @@
         ?>
         <div class="container">
             <div class="content">
-                <h1>Over ons</h1>
+                <h1 class="title">Over ons</h1>
                 <p>Welkom bij Chefly! Wij zijn Senne, Szymon en Bram en wij hebben een website gemaakt die bedoeld is om het delen van recepten en ontdekken van nieuwe recepten gemakkelijker moet maken.</p>
                 <h2>Features</h2>
                 <ul>
