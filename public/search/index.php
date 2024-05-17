@@ -37,6 +37,8 @@
             elseif ($b == $search_str) return 1;
             return levenshtein($a, $search_str) <=> levenshtein($b, $search_str);
         });*/
+
+        
         $distances = [];
         foreach ($data as $d){
             $distances[] = [$d, compareSentences($d["Title"], $search_str)];
@@ -63,33 +65,24 @@
 
 <?php 
 function compareSentences($sentence1, $sentence2) {
-    // Split sentences into words
     $words1 = explode(" ", $sentence1);
     $words2 = explode(" ", $sentence2);
 
-    // Variable to hold the total Levenshtein distance
     $totalDistance = 0;
 
-    // Loop through each word in the first sentence
     foreach ($words1 as $word1) {
         $minDistance = PHP_INT_MAX;
 
-        // Compare it to each word in the second sentence
         foreach ($words2 as $word2) {
-            // Calculate Levenshtein distance
             $levDistance = levenshtein($word1, $word2);
-
-            // If this distance is less than the current minimum, update minimum
             if ($levDistance < $minDistance) {
                 $minDistance = $levDistance;
             }
         }
 
-        // Add the minimum distance for this word to the total distance
         $totalDistance += $minDistance;
     }
 
-    // Return the total Levenshtein distance
     return $totalDistance;
 }
 ?>
