@@ -108,7 +108,7 @@
                         <div class="review">
 
                             <form class="review-new" onsubmit="return required()">
-                                <label for="review">Review: </label>
+                                <label for="review">Inhoud: </label>
                                 <p class="error" id="error">**ERROR** Verplichte velden zijn niet ingevuld **ERROR**</p>
                                 <textarea id="review" name="review"></textarea>
 
