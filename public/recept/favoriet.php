@@ -11,7 +11,7 @@ $id = $_POST["id"];
 require("../../private/database.php");
 $database = new Database();
 $result = $database->select("SELECT `ReceptID`, `GebruikerID` FROM `favoriet` WHERE `ReceptID` = ? AND `GebruikerID` = ?", ["ii", [$id, $user]]);
-if (count($result) > 0){ 
+if (count($result) > 0) {
     $database->delete("DELETE FROM `favoriet` WHERE `ReceptID` = ? AND `GebruikerID` = ?", ["ii", [$id, $user]]);
 } else {
     $database->insert("INSERT INTO `favoriet`(`ReceptID`, `GebruikerID`) VALUES (?,?)", ["ii", [$id, $user]]);

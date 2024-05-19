@@ -104,7 +104,32 @@
                 </div>
                 <div class="blue-box">
                     <div class="review-div">
+                        <p class="review-title">New review</p>
+                        <div class="review">
+
+                            <form class="review-new">
+                                <label for="review">Review: </label>
+                                <textarea id="review" name="review"></textarea>
+
+                                <label for="Score">Score:</label>
+                                <select id="Score" name="Score">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+
+                                <div class="buttons">
+                                    <button type="submit">Review Plaatsen</button>
+                                    <button type="reset">Clear</button>
+                                </div>
+                            </form>
+                        </div>
+
                         <p class="review-title">Reviews</p>
+
                         <div class="review">
                             <?php
                             foreach ($reviews as $review) { ?>
@@ -112,8 +137,10 @@
                                     <h3 class="review-user"><?php echo $review["Naam"] . " " . $review["Achternaam"] ?></h3>
                                     <div class="review-info">
                                         <p><?php echo $review["Score"] . "/5 " ?></p>
-                                        
-                                        <p><?php echo $review["Date"] ?></p>
+                                        <?php
+                                        $date = date_create($review["Date"]);
+                                        ?>
+                                        <p><?php echo date_format($date, "d/m/Y") ?></p>
                                     </div>
                                     <p class="review-text"><?php echo $review["Reviewtekst"] ?></p>
                                 </div>
