@@ -24,3 +24,17 @@ function favorite(id){
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("id=" + id);
 }
+
+
+function required() {
+    var review = document.getElementById("review");
+    var score = document.getElementById("score");
+  
+
+    if (review.value == "" || score.value == "") {
+        document.getElementById("error").style.display = "block";
+
+        return false;
+    }
+    return true;
+}

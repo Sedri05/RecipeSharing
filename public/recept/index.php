@@ -107,12 +107,13 @@
                         <p class="review-title">New review</p>
                         <div class="review">
 
-                            <form class="review-new">
+                            <form class="review-new" onsubmit="return required()">
                                 <label for="review">Review: </label>
+                                <p class="error" id="error">**ERROR** Verplichte velden zijn niet ingevuld **ERROR**</p>
                                 <textarea id="review" name="review"></textarea>
 
                                 <label for="Score">Score:</label>
-                                <select id="Score" name="Score">
+                                <select id="score" name="score">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

@@ -232,6 +232,11 @@ h1 {
     flex-direction: column;
 }
 
+.error {
+    display: none;
+    color: red;
+}
+
 .buttons {
     display: flex;
     flex-direction: row;    
