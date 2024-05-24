@@ -65,6 +65,26 @@ class Database
         return false;
     }
 
+    
+    function insert_if_not_exist(string $query, $params = [], $close = true)
+    {
+        try {
+            $result = $this->select("");
+            if (count($result) == 0) {
+                $stmt = $this->executeStatement($query, $params);
+            }
+            $stmt->close();
+
+            return mysqli_insert_id($this->conn);
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        } finally {
+            if ($close)
+                $this->close();
+        }
+        return false;
+    }
+
     function update(string $query, $params = [], $close = true)
     {
         try {

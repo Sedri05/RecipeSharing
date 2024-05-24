@@ -20,8 +20,6 @@
             die();
         }
         ?>
-        <? require ("/new.php");
-        ?>
         <div class="container">
             <div class="navigation">
                 <h2>Nieuw recept maken:</h2>
@@ -35,13 +33,13 @@
                                 <input class="file" type="file" id="picture" name="picture" accept="image/*">
                                 <label class="label" for="tags">Tags:</label>
                                 <div class="tag-container" id="tagContainer">
-                                    <input class="text" type="text" id="tags" name="tags" class="tagInput">
+                                    <input class="text" type="text" id="tags" name="tags[]" class="tagInput">
                                 </div>
                                 <button class="button" type="button" onclick="addTag()">Tag toevoegen</button>
 
                                 <label class="label" for="ingredients">Ingrediënten :</label>
                                 <div class="tag-container" id="ingredientContainer">
-                                    <input class="text" type="text" id="ingredients" name="ingredients" class="tagInput">
+                                    <input class="text" type="text" id="ingredients" name="ingredients[]" class="tagInput">
                                 </div>
                                 <button class="button" type="button" onclick="addIngredient()">Ingrediënt toevoegen</button>
                             </div>
@@ -60,7 +58,7 @@
                                 <label class="label" for="prepTime">Bereidingstijd (Min):</label>
                                 <input class="text2" type="number" id="prepTime" name="prepTime" min="0">
 
-                                <label class="label" for="difficulty">Moeijlijkheid (1-5):</label>
+                                <label class="label" for="difficulty">Moeijlijkheid:</label>
                                 <select class="select2" id="difficulty" name="difficulty">
                                     <option value=""></option>
                                     <option value="1">1</option>
@@ -78,15 +76,13 @@
                             <label class="label" for="instructions">Bereiding:</label>
                             <textarea class="textarea" id="instructions" name="instructions" rows="6"></textarea>
 
-                            <button class="submitbutton" onclick="addNew()" type="submit">Plaatsen</button>
+                            <button class="submitbutton" type="submit">Plaatsen</button>
                         </div>
                 </form>
             </div>
         </div>
     </div>
-    <?php
-    require ("../../footer.php")
-        ?>
+    <?php require ("../../footer.php")?>
 </body>
 
 </html>
