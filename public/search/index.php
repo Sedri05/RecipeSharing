@@ -27,7 +27,7 @@
         }
         require_once("../../private/database.php");
         $database = new Database();
-        $data = $database->select("SELECT ReceptID, Title, Bereiding, Personen FROM recept", [], false);
+        $data = $database->select("SELECT ReceptID, Title, Bereiding, Personen, Moeilijkheid, Berijdingstijd FROM recept", [], false);
         $tags = $database->select("SELECT tr.ReceptID, t.Tagname FROM tagsrecept tr LEFT JOIN tag t ON tr.TagID = t.TagID", [], false);
         $ingredients = $database->select("SELECT tr.ReceptID, t.Ingredient FROM ingredientrecept tr LEFT JOIN ingredient t ON tr.IngredientID = t.IngredientID; ");
         $result = [];
@@ -69,10 +69,19 @@
         <h1 class="search-title">Search Results for: <?php echo $search_str ?></h1>
         <?php
         foreach ($distances as $recept) {
-          echo "<div class = 'result'>
-          <p> Title: " . $recept[0]["Title"] . "
-          </p>
-          <p> ".$recept[0]["Bereiding"]."</p>
+          echo "
+          <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
+          <div class = 'result'>
+            <div class = 'top'>
+                <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
+                <p class = 'title'> Title: " . $recept[0]["Title"] . "
+                </p>
+                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . " Moeilijkheid: " . $recept[0]["Moeilijkheid"] . " Tijd: " . $recept[0]["Berijdingstijd"] . "
+                </p>
+            </div>
+            <div class = 'bottom'>
+                <p class = 'bereiding'> ".$recept[0]["Bereiding"]."</p>
+            </div>
           </div>";
         }
         ?>

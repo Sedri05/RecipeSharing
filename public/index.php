@@ -32,7 +32,6 @@
                                 <img src="<?php echo $database->get_image($recept["ReceptID"]) ?>">
                             </div>
                         </a>
-
                         <div class="recept-info-column">
                             <h2 class="recept-info-title"> <?php echo $recept["Title"] ?> </h2>
                             <p class="recept-info"> Moeilijkheid: <?php echo $recept["Moeilijkheid"] ?> </p>
