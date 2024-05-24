@@ -42,9 +42,11 @@
             <div class="container">
                 <div class="title-div">
                     <h1> <?php echo $recept_info["Title"]; ?> </h1>
+                    <?php if (isset($_SESSION["logged_in"])){ ?>
                     <div class="favorite" onclick="favorite(<?php echo $recept_id; ?>)">
                         <span id="favorite" class="fixed"><?php echo (!$favoriet) ?  "favorite" : "heart_check" ?></span>
                     </div>
+                    <?php } ?>
                 </div>
                 <div class="info">
                     <div class="info-box">
@@ -106,7 +108,7 @@
                     <div class="review-div">
                         <p class="review-title">New review</p>
                         <div class="review">
-
+                            <?php if (isset($_SESSION["logged_in"])){ ?>
                             <form class="review-new" onsubmit="return required()">
                                 <label for="review">Inhoud: </label>
                                 <p class="error" id="error">**ERROR** Verplichte velden zijn niet ingevuld **ERROR**</p>
@@ -127,6 +129,11 @@
                                     <button type="reset">Clear</button>
                                 </div>
                             </form>
+                            <?php } else { ?>
+                                <div class="review-new">
+                                    <p>You must be logged in to leave a review.</p>
+                                </div>
+                            <?php } ?>
                         </div>
 
                         <p class="review-title">Reviews</p>
