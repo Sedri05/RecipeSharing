@@ -170,7 +170,7 @@ class Database
     function get_image($recept_id)
     {
         $img = "balls";
-        $exts = array('bmp', 'png', 'jpg');
+        $exts = array('bmp', 'png', 'jpg', 'jpeg');
         foreach ($exts as $ext) {
             //echo $_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext;
             if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext)) {
