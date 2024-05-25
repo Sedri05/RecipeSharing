@@ -18,7 +18,7 @@
     justify-content: center;
 }
 
-.search-title{
+.search-title {
     align-self: center;
     font-size: 150%;
     font-weight: bold;
@@ -37,7 +37,7 @@ a {
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
-    background-color:#7FC7D9 ;
+    background-color: #7FC7D9;
     color: black;
     border: #365486 solid 2px;
     border-radius: 10px;
@@ -45,11 +45,13 @@ a {
 }
 
 .result:hover {
-    transform: scale(1.02);
+    box-shadow: 1px 1px 1px 1px black;
+    transform: scale(1.005);
 }
 
 .result img {
-    width: 250px;;
+    width: 250px;
+    ;
     height: auto;
     padding: 5px;
     margin-left: auto;
