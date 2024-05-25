@@ -72,17 +72,14 @@
           echo "
           <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
           <div class = 'result'>
-          
-            <div class = 'top'>
-                <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
-                <p class = 'title'> Title: " . $recept[0]["Title"] . "
+            <div class = 'text-content'>
+                <p class = 'title'>" . $recept[0]["Title"] . "
                 </p>
-                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . " Moeilijkheid: " . $recept[0]["Moeilijkheid"] . " Tijd: " . $recept[0]["Berijdingstijd"] . "
+                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . " Moeilijkheid: " . $recept[0]["Moeilijkheid"] . " Tijd: " . $recept[0]["Berijdingstijd"] . " min
                 </p>
-            </div>
-            <div class = 'bottom'>
                 <p class = 'bereiding'> ".$recept[0]["Bereiding"]."</p>
             </div>
+            <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
           </div>";
         }
         ?>
