@@ -72,6 +72,7 @@
           echo "
           <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
           <div class = 'result'>
+          
             <div class = 'top'>
                 <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
                 <p class = 'title'> Title: " . $recept[0]["Title"] . "

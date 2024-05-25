@@ -15,7 +15,7 @@
             <?php } ?>
             <div class="header-flex-item-search">
                 <span class="search-icon material-symbols-outlined">search</span>
-                <form action="/search">
+                <form autocomplete="off" action="/search">
                     <input class="search-input" type="text" placeholder="zoeken" name="search">
                 </form>
             </div>
