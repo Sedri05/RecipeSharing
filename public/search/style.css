@@ -45,13 +45,14 @@ a {
 }
 
 .result:hover {
-    transform: scale(1.10);
+    transform: scale(1.02);
 }
 
 .result img {
     width: 250px;;
     height: auto;
     padding: 5px;
+    margin-left: auto;
     margin-right: 30px;
 }
 
@@ -66,10 +67,21 @@ a {
     margin-right: 15px;
 }
 
+.row-info {
+    display: flex;
+    flex-direction: row;
+}
+
 .info {
     font-size: 120%;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: #bdc3c7;
+    padding: 5px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    width: fit-content;
 }
 
 .bottom {

@@ -68,16 +68,29 @@
     <div class="results">
         <h1 class="search-title">Search Results for: <?php echo $search_str ?></h1>
         <?php
+        function dec_str($string, $length = 100) {
+            if (strlen($string) > $length) {
+                return substr($string, 0, $length) . '..';
+            } else {
+                return $string;
+            }
+        }
+
         foreach ($distances as $recept) {
+          $bereiding_afgekort = dec_str($recept[0]["Bereiding"], 100);
           echo "
           <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
           <div class = 'result'>
             <div class = 'text-content'>
                 <p class = 'title'>" . $recept[0]["Title"] . "
                 </p>
-                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . " Moeilijkheid: " . $recept[0]["Moeilijkheid"] . " Tijd: " . $recept[0]["Berijdingstijd"] . " min
+                <div class='row-info'>
+                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . "
                 </p>
-                <p class = 'bereiding'> ".$recept[0]["Bereiding"]."</p>
+                <p class = 'info'> Moeilijkheid: " . $recept[0]["Moeilijkheid"] . "</p>
+                <p class = 'info'> Tijd: " . $recept[0]["Berijdingstijd"] . " min</p>
+                </div>
+                <p class = 'bereiding'> ".$bereiding_afgekort."</p>
             </div>
             <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
           </div>";
