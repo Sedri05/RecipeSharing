@@ -21,8 +21,8 @@
                     <p> Please enter a search query. </p>
                 </div>
             </div>
-        </div>
-            <?php require("../footer.php");
+    </div>
+<?php require("../footer.php");
             die();
         }
         require_once("../../private/database.php");
@@ -68,32 +68,35 @@
     <div class="results">
         <h1 class="search-title">Search Results for: <?php echo $search_str ?></h1>
         <?php
-        function dec_str($string, $length = 100) {
+        function dec_str($string, $length = 100)
+        {
             if (strlen($string) > $length) {
                 return substr($string, 0, $length) . '..';
             } else {
                 return $string;
             }
         }
-
+        $i = 0;
         foreach ($distances as $recept) {
-          $bereiding_afgekort = dec_str($recept[0]["Bereiding"], 100);
-          echo "
-          <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
-          <div class = 'result'>
-            <div class = 'text-content'>
-                <p class = 'title'>" . $recept[0]["Title"] . "
-                </p>
-                <div class='row-info'>
-                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . "
-                </p>
-                <p class = 'info'> Moeilijkheid: " . $recept[0]["Moeilijkheid"] . "</p>
-                <p class = 'info'> Tijd: " . $recept[0]["Berijdingstijd"] . " min</p>
+            $i++;
+            if ($i > 50) break;
+            $bereiding_afgekort = dec_str($recept[0]["Bereiding"], 100);
+            echo "
+            <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
+            <div class = 'result'>
+                <div class = 'text-content'>
+                    <p class = 'title'>" . $recept[0]["Title"] . "
+                    </p>
+                    <div class='row-info'>
+                    <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . "
+                    </p>
+                    <p class = 'info'> Moeilijkheid: " . $recept[0]["Moeilijkheid"] . "</p>
+                    <p class = 'info'> Tijd: " . $recept[0]["Berijdingstijd"] . " min</p>
+                    </div>
+                    <p class = 'bereiding'> " . $bereiding_afgekort . "</p>
                 </div>
-                <p class = 'bereiding'> ".$bereiding_afgekort."</p>
-            </div>
-            <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
-          </div>";
+                <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
+            </div>";
         }
         ?>
     </div>
