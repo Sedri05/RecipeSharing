@@ -2,6 +2,7 @@ function addTag() {
     const tagInput = document.createElement('input');
     tagInput.type = 'text';
     tagInput.className = 'tagInput text';
+    tagInput.setAttribute("required", "");
     tagInput.name = "tags[]"
     document.getElementById('tagContainer').appendChild(tagInput);
 }
@@ -10,6 +11,7 @@ function addIngredient() {
     const ingredientInput = document.createElement('input');
     ingredientInput.type = 'text';
     ingredientInput.className = 'tagInput text';
+    ingredientInput.setAttribute("required", "");
     ingredientInput.name = "ingredients[]"
     document.getElementById('ingredientContainer').appendChild(ingredientInput);
 }

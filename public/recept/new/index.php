@@ -28,24 +28,24 @@
                         <div class="row">
                             <div class="formnavigation">
                                 <label class="label" for="title">Titel:</label>
-                                <input class="text" id="title" name="title">
+                                <input class="text" id="title" name="title" required>
                                 <label class="label" for="picture">Voeg een foto toe:</label>
-                                <input class="file" type="file" id="picture" name="picture" accept="image/*">
+                                <input class="file" type="file" id="picture" name="picture" accept="image/*" required>
                                 <label class="label" for="tags">Tags:</label>
                                 <div class="tag-container" id="tagContainer">
-                                    <input class="text" type="text" id="tags" name="tags[]" class="tagInput">
+                                    <input class="text" type="text" id="tags" name="tags[]" class="tagInput" required>
                                 </div>
                                 <button class="button" type="button" onclick="addTag()">Tag toevoegen</button>
 
                                 <label class="label" for="ingredients">Ingrediënten :</label>
                                 <div class="tag-container" id="ingredientContainer">
-                                    <input class="text" type="text" id="ingredients" name="ingredients[]" class="tagInput">
+                                    <input class="text" type="text" id="ingredients" name="ingredients[]" class="tagInput" required>
                                 </div>
                                 <button class="button" type="button" onclick="addIngredient()">Ingrediënt toevoegen</button>
                             </div>
                             <div class="tweededeel">
                                 <label class="label" for="mealType">Maaltijdtype:</label>
-                                <select class="select1" id="mealType" name="mealType">
+                                <select class="select1" id="mealType" name="mealType" required>
                                     <option value=""></option>
                                     <option value="1">Ontbijt</option>
                                     <option value="3">Avondmaal</option>
@@ -56,10 +56,10 @@
                                 </select>
 
                                 <label class="label" for="prepTime">Bereidingstijd (Min):</label>
-                                <input class="text2" type="number" id="prepTime" name="prepTime" min="0">
+                                <input class="text2" type="number" id="prepTime" name="prepTime" min="0" required>
 
                                 <label class="label" for="difficulty">Moeijlijkheid:</label>
-                                <select class="select2" id="difficulty" name="difficulty">
+                                <select class="select2" id="difficulty" name="difficulty" required>
                                     <option value=""></option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -69,12 +69,12 @@
                                 </select>
 
                                 <label class="label" for="servings">Aantal personen:</label>
-                                <input class="text2" type="number" id="servings" name="servings" min="1">
+                                <input class="text2" type="number" id="servings" name="servings" min="1" required>
                             </div>
                         </div>
                         <div class="bereiding">
                             <label class="label" for="instructions">Bereiding:</label>
-                            <textarea class="textarea" id="instructions" name="instructions" rows="6"></textarea>
+                            <textarea class="textarea" id="instructions" name="instructions" rows="6" required></textarea>
 
                             <button class="submitbutton" type="submit">Plaatsen</button>
                         </div>

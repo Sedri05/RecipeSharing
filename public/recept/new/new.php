@@ -14,13 +14,13 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
     $allowUpload = false;
 }
 
-$check = getimagesize($_FILES["picture"]["tmp_name"]);
-if (!($check !== false)) {
+if (!(getimagesize($_FILES["picture"]["tmp_name"]) !== false)) {
     $allowUpload = false;
 }
 
 if (!$allowUpload) {
     http_response_code(401);
+    echo "Something went wrong while trying to process this request.";
     exit();
 }
 
@@ -34,7 +34,10 @@ $prepTime = $_POST["prepTime"];
 $difficulty = $_POST["difficulty"];
 $servings = $_POST["servings"];
 $bereiding = $_POST["instructions"];
-if (empty($title) || empty($ingredients) || empty($tags));
+if (empty($title) || empty($ingredients) || empty($tags) || empty($mealtype) || empty($prepTime) || empty($difficulty) || empty($servings) || empty($bereiding)){
+    echo "Something went wrong while trying to process this request.";
+    exit();
+}
 
 $recept_id = $Database->insert("INSERT INTO recept(`Title`, `GebruikerID`,`Bereiding`,`Personen`,`Moeilijkheid`,`Berijdingstijd`,`MaaltijdtypeID`, `Date`)
             VALUES (?,?,?,?,?,?,?, NOW())", ["sisiiii", [$title, $_SESSION["user"], $bereiding, $servings, $difficulty, $prepTime, $mealtype]], false);
@@ -49,6 +52,7 @@ if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
 $tag_ids = [];
 
 foreach ($tags as $tag) {
+    if ($tag == "") continue;
     $ingredient = ucfirst($tag);
     $Database->insert("INSERT INTO tag (`Tagname`) SELECT ? WHERE NOT EXISTS ( SELECT 1 FROM tag WHERE `Tagname` = ? )", ["ss", [$tag, $tag]], false);
     $tag_ids[] = $Database->select_one("SELECT TagID FROM tag WHERE Tagname = ?", ["s", [$tag]], false)["TagID"];
@@ -58,6 +62,7 @@ foreach ($tags as $tag) {
 $ingredient_ids = [];
 
 foreach ($ingredients as $ingredient) {
+    if ($ingredient == "") continue;
     $ingredient = ucfirst($ingredient);
     $Database->insert("INSERT INTO ingredient (`Ingredient`) SELECT ? WHERE NOT EXISTS ( SELECT 1 FROM ingredient WHERE `Ingredient` = ? )", ["ss", [$ingredient, $ingredient]], false);
     $ingredient_ids[] = $Database->select_one("SELECT IngredientID FROM ingredient WHERE Ingredient = ?", ["s", [$ingredient]], false)["IngredientID"];
