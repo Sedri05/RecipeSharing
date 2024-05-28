@@ -45,8 +45,13 @@ class Database
 
     function close()
     {
-        @$this->conn->close();
-        unset($this->conn);
+        try {
+            @$this->conn->close();
+        } catch (Exception $e) {
+            //Do nothing
+        } finally {
+            unset($this->conn);
+        }
     }
 
     function insert(string $query, $params = [], $close = true)
@@ -65,7 +70,7 @@ class Database
         return false;
     }
 
-    
+
     function insert_if_not_exist(string $query, $params = [], $close = true)
     {
         try {
@@ -170,6 +175,7 @@ class Database
             return $stmt;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
+            $this->close();
         }
     }
 
@@ -189,8 +195,8 @@ class Database
 
     function get_image($recept_id)
     {
-        $img = "balls";
-        $exts = array('bmp', 'png', 'jpg', 'jpeg');
+        $img = "Image Failed to Load";
+        $exts = array('bmp', 'png', 'jpg', 'jpeg', 'webp');
         foreach ($exts as $ext) {
             //echo $_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext;
             if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/img' . "/" . $recept_id . "." . $ext)) {

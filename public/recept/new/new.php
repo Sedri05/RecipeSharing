@@ -5,7 +5,25 @@ if ($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_SESSION["logged_in"])) {
 }
 require_once("../../../private/database.php");
 
-print_r($_POST);
+$target_dir = $_SERVER["DOCUMENT_ROOT"] . "/img/";
+$target_file = $target_dir . basename($_FILES["picture"]["name"]);
+$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$allowUpload = true;
+
+if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "bmp" && $imageFileType != "webp") {
+    $allowUpload = false;
+}
+
+$check = getimagesize($_FILES["picture"]["tmp_name"]);
+if (!($check !== false)) {
+    $allowUpload = false;
+}
+
+if (!$allowUpload) {
+    http_response_code(401);
+    exit();
+}
+
 
 $Database = new Database();
 $title = $_POST["title"];
@@ -16,16 +34,46 @@ $prepTime = $_POST["prepTime"];
 $difficulty = $_POST["difficulty"];
 $servings = $_POST["servings"];
 $bereiding = $_POST["instructions"];
-if (empty($title) || empty($picture));
+if (empty($title) || empty($ingredients) || empty($tags));
 
-$recept_id = $Database->insert("INSERT INTO recept(`Title`,`Bereiding`,`Personen`,`Moeilijkheid`,`Berijdingstijd`,`MaaltijdtypeID`, `Date`)
-            VALUES (?,?,?,?,?,?, NOW())", ["ssiiii", [$title, $bereiding, $servings, $difficulty, $prepTime, $mealtype]]);
+$recept_id = $Database->insert("INSERT INTO recept(`Title`, `GebruikerID`,`Bereiding`,`Personen`,`Moeilijkheid`,`Berijdingstijd`,`MaaltijdtypeID`, `Date`)
+            VALUES (?,?,?,?,?,?,?, NOW())", ["sisiiii", [$title, $_SESSION["user"], $bereiding, $servings, $difficulty, $prepTime, $mealtype]], false);
 
-echo $recept_id;
+$target_file = $target_dir . $recept_id . "." . $imageFileType;
 
-foreach ($ingredients as $ingredient){
-    
+if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
+    $Database->delete("DELETE FROM recept WHERE ReceptID = ?", ["i", [$recept_id]]);
+    exit();
 }
+
+$tag_ids = [];
+
+foreach ($tags as $tag) {
+    $ingredient = ucfirst($tag);
+    $Database->insert("INSERT INTO tag (`Tagname`) SELECT ? WHERE NOT EXISTS ( SELECT 1 FROM tag WHERE `Tagname` = ? )", ["ss", [$tag, $tag]], false);
+    $tag_ids[] = $Database->select_one("SELECT TagID FROM tag WHERE Tagname = ?", ["s", [$tag]], false)["TagID"];
+    $tag_ids[] = $recept_id;
+}
+
+$ingredient_ids = [];
+
+foreach ($ingredients as $ingredient) {
+    $ingredient = ucfirst($ingredient);
+    $Database->insert("INSERT INTO ingredient (`Ingredient`) SELECT ? WHERE NOT EXISTS ( SELECT 1 FROM ingredient WHERE `Ingredient` = ? )", ["ss", [$ingredient, $ingredient]], false);
+    $ingredient_ids[] = $Database->select_one("SELECT IngredientID FROM ingredient WHERE Ingredient = ?", ["s", [$ingredient]], false)["IngredientID"];
+    $ingredient_ids[] = $recept_id;
+}
+
+$values = rtrim(str_repeat("(?, ?),", count($ingredient_ids) / 2), ',');
+$Database->insert("INSERT INTO ingredientrecept(`IngredientID`,`ReceptID`) VALUES " . $values, [str_repeat("i", count($ingredient_ids)), $ingredient_ids], false);
+
+$values = rtrim(str_repeat("(?, ?),", count($tag_ids) / 2), ',');
+$Database->insert("INSERT INTO tagsrecept(`TagID`,`ReceptID`) VALUES " . $values, [str_repeat("i", count($tag_ids)), $tag_ids], false);
+
+
+$Database->close();
+header("Location: /recept/?recept=" . $recept_id);
+die();
 //$Database->insert("INSERT INTO ingredient(`Ingredrient`) VALUES (?, NOW())", ["s", [$ingredients]]);
 
 //$Database->insert("INSERT INTO tag(`Tagname`) VALUES (?, NOW())", ["s", [$tags]]);

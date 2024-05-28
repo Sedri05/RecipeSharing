@@ -15,7 +15,7 @@
     <div class="wrapper">
         <?php require ("../../header.php");
         if (!isset($_SESSION["logged_in"])) { ?>
-        <p> You are not logged in. Click <a href="../login/">Here</a> to log in.</p>
+        <p> You are not logged in. Click <a href="../../login/">Here</a> to log in.</p>
         <?php
             die();
         }
