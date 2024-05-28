@@ -159,16 +159,17 @@ a:visited {
     text-decoration: none;
     font-size: 130%;
     padding: 10px;
-    margin-left: 10px;
     margin-right: auto;
     background-color: #365486;
     color: #fff;
     border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease-in-out;
 }
 
 .addrecept:hover {
-    transition: 0.5s;
     transform: scale(1.05);
+    background-color: #0f1035;
     color: #fff;
 }
 
