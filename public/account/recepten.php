@@ -8,7 +8,7 @@ $recepten = $database->select(
     "SELECT `ReceptID`, `Title`, `Personen`, `Moeilijkheid`, `Berijdingstijd`, `Foto`, m.`Maaltijdtype`, `Date` FROM `recept` r LEFT JOIN `maaltijdtype` m ON r.`MaaltijdtypeID` = m.`MaaltijdtypeID` WHERE `GebruikerID` = ?",
     ["i", [$user]]
 );
-
+?> <a class="addrecept" href="/recept/new/index.php">Recepten toevoegen</a> <?php
 foreach ($recepten as $recept) {
 ?>
     <a class="info-text border" href="<?php echo "/recept/?recept=" . $recept["ReceptID"] ?>">

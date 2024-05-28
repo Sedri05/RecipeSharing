@@ -155,6 +155,28 @@ a:visited {
     color: black;
 }
 
+.addrecept {
+    text-decoration: none;
+    font-size: 130%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: auto;
+    background-color: #365486;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.addrecept:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.addrecept:visited {
+    color: #fff;
+}
+
+
 .delete-submit {
     font-size: 2vw;
     border: none;

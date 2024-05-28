@@ -27,7 +27,7 @@
         }
         require_once("../../private/database.php");
         $database = new Database();
-        $data = $database->select("SELECT ReceptID, Title, Bereiding, Personen FROM recept", [], false);
+        $data = $database->select("SELECT ReceptID, Title, Bereiding, Personen, Moeilijkheid, Berijdingstijd FROM recept", [], false);
         $tags = $database->select("SELECT tr.ReceptID, t.Tagname FROM tagsrecept tr LEFT JOIN tag t ON tr.TagID = t.TagID", [], false);
         $ingredients = $database->select("SELECT tr.ReceptID, t.Ingredient FROM ingredientrecept tr LEFT JOIN ingredient t ON tr.IngredientID = t.IngredientID; ");
         $result = [];
@@ -68,11 +68,31 @@
     <div class="results">
         <h1 class="search-title">Search Results for: <?php echo $search_str ?></h1>
         <?php
+        function dec_str($string, $length = 100) {
+            if (strlen($string) > $length) {
+                return substr($string, 0, $length) . '..';
+            } else {
+                return $string;
+            }
+        }
+
         foreach ($distances as $recept) {
-          echo "<div class = 'result'>
-          <p> Title: " . $recept[0]["Title"] . "
-          </p>
-          <p> ".$recept[0]["Bereiding"]."</p>
+          $bereiding_afgekort = dec_str($recept[0]["Bereiding"], 100);
+          echo "
+          <a href='/recept/?recept= " . $recept[0]["ReceptID"] . "''>
+          <div class = 'result'>
+            <div class = 'text-content'>
+                <p class = 'title'>" . $recept[0]["Title"] . "
+                </p>
+                <div class='row-info'>
+                <p class = 'info'> Aantal personen: " . $recept[0]["Personen"] . "
+                </p>
+                <p class = 'info'> Moeilijkheid: " . $recept[0]["Moeilijkheid"] . "</p>
+                <p class = 'info'> Tijd: " . $recept[0]["Berijdingstijd"] . " min</p>
+                </div>
+                <p class = 'bereiding'> ".$bereiding_afgekort."</p>
+            </div>
+            <img src='" . $database->get_image($recept[0]["ReceptID"]) . " '>
           </div>";
         }
         ?>
