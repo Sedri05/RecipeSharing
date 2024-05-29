@@ -39,8 +39,7 @@ a {
     padding: 10px;
     background-color: #7FC7D9;
     color: black;
-    border: #365486 solid 2px;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: 0.5s ease-in-out;
 }
 
@@ -51,11 +50,11 @@ a {
 
 .result img {
     width: 250px;
-    ;
     height: auto;
     padding: 5px;
     margin-left: auto;
     margin-right: 30px;
+    border-radius: 25px;
 }
 
 .title {
@@ -79,11 +78,12 @@ a {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 10px;
-    background-color: #bdc3c7;
+    background-color: #365486;
     padding: 5px;
     border-radius: 5px;
     text-wrap: nowrap;
     width: fit-content;
+    color: white;
 }
 
 .bottom {

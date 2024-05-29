@@ -24,16 +24,30 @@ footer {
     background-color: #365486;
     display: flex;
     padding-left: auto;
+    justify-content: center;
 }
 footer div{
     text-align: center;
+    align-self: center;
 }
-.footer-nav a {
-    display: block;
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-nav li {
     margin-right: 25px;
-    margin-left: 350px;
+}
+
+.footer-nav a {
     white-space: nowrap;
-    display: block;
     color: white;
     text-decoration: none;
     text-align:center;
@@ -41,35 +55,6 @@ footer div{
     transition: 0.5s;
 }
 .footer-nav a:hover {
-    color:aqua;
-    transform: scale(1.05);
-}
-.sendto{
-    margin-left: auto;
-    margin-right: 300px;
-    color: white;
-}
-.inputfoot{
-    width: 300px;
-    height: 45px;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    outline: none;
-    border: none;
-    font-style: italic;
-}
-.buttonfoot {
-    background: transparent;
-    border: 2px solid;
-    color: white ;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    transition: 0.5s;
-}
-.buttonfoot:hover {
     color:aqua;
     transform: scale(1.05);
 }
