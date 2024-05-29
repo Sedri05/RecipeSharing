@@ -11,14 +11,6 @@ function favorite(id){
     }
 
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-            var res = JSON.parse(this.responseText);
-            if (res.success === undefined) {
-                document.getElementById("general_error").innerHTML = "Something went wrong, please try again later!";
-            }
-        }
-    }
     event.preventDefault();
     xmlhttp.open("POST", "favoriet.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -26,15 +18,27 @@ function favorite(id){
 }
 
 
-function required() {
+function putReview(id) {
+    event.preventDefault();
     var review = document.getElementById("review");
     var score = document.getElementById("score");
   
 
     if (review.value == "" || score.value == "") {
         document.getElementById("error").style.display = "block";
-
-        return false;
+        return;
     }
-    return true;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+            console.log(this.responseText);
+            var res = JSON.parse(this.responseText);
+            if (res.success === undefined) {
+                //document.getElementById("review_error").innerHTML = "Something went wrong, please try again later!";
+            }
+        }
+    }
+    xmlhttp.open("POST", "postReview.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("text=" + review.value + "&score=" + score.value + "&id=" + id);
 }
