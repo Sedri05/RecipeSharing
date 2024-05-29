@@ -6,6 +6,9 @@ if (!isset($_SESSION["logged_in"])) { ?>
     die();
 }
 
+if ($_SERVER["REQUEST_METHOD"] != "POST")
+    exit();
+
 $user = $_SESSION["user"];
 $id = $_POST["id"];
 require("../../private/database.php");

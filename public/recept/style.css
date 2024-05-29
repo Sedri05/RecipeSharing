@@ -70,6 +70,12 @@ h1 {
     font-size: 32px;
 }
 
+select {
+    display: inline;
+    height: 30px;
+    font-size: large;
+}
+
 .title-div {
     width: 100%;
     display: flex;
@@ -232,6 +238,15 @@ h1 {
     flex-direction: column;
 }
 
+.score-div {
+    margin-top: 10px;
+}
+
+.score-label {
+    display: inline;
+    vertical-align: baseline;
+}
+
 .error {
     display: none;
     color: red;
@@ -240,25 +255,10 @@ h1 {
 .buttons {
     display: flex;
     flex-direction: row;    
-
+    justify-content: center;
 }
 
-button[type=submit] {
-    width: 50%;
-    background-color: #7FC7D9;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button[type=submit]:hover {
-    background-color: #45a049;
-}
-
-button[type=reset] {
+button {
     width: 50%;
     background-color: #365486;
     color: white;
@@ -267,13 +267,13 @@ button[type=reset] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: .5s ease-in-out;
 }
 
-button[type=reset]:hover {
-    background-color: darkred;
+button:hover {
+    background-color: #0f1035;
+    transform: scale(1.05);
 }
-
-
 
 .review {
     text-align: left;
@@ -308,6 +308,7 @@ button[type=reset]:hover {
     display: flex;
     flex-direction: row;
     margin: 5px;
+    margin-left: 0;
 }
 
 .review-info p {
