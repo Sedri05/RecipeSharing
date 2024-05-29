@@ -1,6 +1,14 @@
 .par1 {
-    margin: 30px;
     font-size: 30px;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
 
 .center {
@@ -10,7 +18,8 @@
     background-color: #dcf2f1;
     border: #365486 solid 2px;
     border-radius: 10px;
-    margin: 15px 150px 15px 150px;
+    width: 87%;
+    margin: 15px;
 }
 
 .recept-row {
