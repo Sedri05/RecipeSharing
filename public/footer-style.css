@@ -24,9 +24,17 @@ footer {
     background-color: #365486;
     display: flex;
     padding-left: auto;
+    justify-content: center;
 }
 footer div{
     text-align: center;
+    align-self: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-nav ul {
@@ -34,12 +42,11 @@ footer div{
     flex-direction: row;
 }
 
-.footer-nav ul li {
-    display: flex;
+.footer-nav li {
+    margin-right: 25px;
 }
 
 .footer-nav a {
-    margin-right: 25px;
     white-space: nowrap;
     color: white;
     text-decoration: none;
