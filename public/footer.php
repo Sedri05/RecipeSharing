@@ -7,12 +7,4 @@
             <li><a href="/about">Over Ons</a></li>
         </ul>
     </div>
-    <div class="sendto">
-        <h3>Blijf op de hoogte:</h3>
-        <form>
-            <input class="inputfoot" type="email" placeholder="E-mail" required>
-            <br>
-            <button class="buttonfoot" type="submit">Subcribe Now</button>
-        </form>
-    </div>
 </footer>
