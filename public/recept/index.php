@@ -29,7 +29,7 @@
         $creator = $database->select_one("SELECT `Naam`, `Achternaam` FROM `gebruiker` WHERE `GebruikerID` = ?", ["i", [$recept_info["GebruikerID"]]], false);
         $review = $database->select("SELECT * FROM `review` WHERE `ReceptID` = ?", ["i", [$recept_id]], false);
         $type = $database->select_one("SELECT `Maaltijdtype` FROM `maaltijdtype` WHERE `MaaltijdtypeID` = ?;", ["i", [$recept_info["MaaltijdtypeID"]]]);
-        $reviews = $database->select("SELECT `ReviewID`, g.Naam, g.Achternaam, `Score`, `Reviewtekst`, `Date` FROM `review` r LEFT JOIN `gebruiker` g ON r.GebruikerID = g.GebruikerID WHERE `ReceptID` = ? ORDER BY `Date`", ["i", [$recept_id]]);
+        $reviews = $database->select("SELECT `ReviewID`, g.Naam, g.Achternaam, `Score`, `Reviewtekst`, `Date` FROM `review` r LEFT JOIN `gebruiker` g ON r.GebruikerID = g.GebruikerID WHERE `ReceptID` = ? ORDER BY `Date` DESC", ["i", [$recept_id]]);
 
         $favoriet = false;
         if (isset($_SESSION["logged_in"])) {
@@ -109,7 +109,7 @@
                         <p class="review-title">New review</p>
                         <div class="review">
                             <?php if (isset($_SESSION["logged_in"])) { ?>
-                                <form class="review-new" onsubmit="putReview(<?php echo $recept_id?>)">
+                                <form class="review-new" onsubmit="putReview(<?php echo $recept_id ?>)">
                                     <label for="review">Inhoud: </label>
                                     <p class="error" id="error">**ERROR** Verplichte velden zijn niet ingevuld **ERROR**</p>
                                     <textarea id="review" name="review" required rows="5"></textarea>
@@ -118,7 +118,6 @@
                                         <label for="Score" class="score-label">Score:</label>
                                         <select id="score" name="score" required>
                                             <option value=""></option>
-                                            <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -139,7 +138,7 @@
 
                         <p class="review-title">Reviews</p>
 
-                        <div class="review">
+                        <div class="review" id="review-list">
                             <?php
                             foreach ($reviews as $review) { ?>
                                 <div class="review-content">

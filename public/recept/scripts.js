@@ -32,10 +32,19 @@ function putReview(id) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
             console.log(this.responseText);
-            var res = JSON.parse(this.responseText);
+            let res = JSON.parse(this.responseText);
             if (res.success === undefined) {
+                
                 //document.getElementById("review_error").innerHTML = "Something went wrong, please try again later!";
+            } else {
+                let div = document.createElement("div");
+                div.className = "review-content";
+                div.innerHTML = '<h3 class="review-user">' + res.success + '</h3> <div class="review-info"> <p>' + score.value + '/5</p><p> ' + new Date().toLocaleDateString()  + '</p></div><p class="review-text">' + review.value + '</p>'
+                let ls = document.getElementById("review-list");
+                ls.insertBefore(div, ls.children[0])
             }
+            review.value = "";
+            score.value = "";
         }
     }
     xmlhttp.open("POST", "postReview.php", true);
