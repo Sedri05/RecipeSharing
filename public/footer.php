@@ -3,7 +3,6 @@
     <div class="footer-nav">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="/search">Tags</a></li>
             <li><a href="/about">Over Ons</a></li>
         </ul>
     </div>
