@@ -19,7 +19,7 @@
             require_once "../private/database.php";
             $database = new Database();
 
-            $recepten = $database->select("SELECT `ReceptID`, `Title`, `Moeilijkheid`,`Berijdingstijd`,`Personen`, `Foto`, `Date` FROM `recept` ORDER by Date DESC;");
+            $recepten = $database->select("SELECT `ReceptID`, `Title`, `Moeilijkheid`,`Berijdingstijd`,`Personen`, `Foto`, `Date` FROM `recept` ORDER by Date DESC LIMIT 10;");
             ?>
             <div class="center">
                 <h3 class="par1">Recente recepten:</h3>
