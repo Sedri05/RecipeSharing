@@ -46,11 +46,11 @@
 
 .scrollmenu {
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
+    text-wrap: wrap;
     text-align: start;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     overflow-y: hidden;
-    overflow: auto;
 }
 
 .scrollmenu p {
@@ -61,9 +61,10 @@
     border-radius: 20px;
     width: auto;
     height: auto;
-    white-space: nowrap;
+    white-space: wrap;
     background-color: #bdc3c7;
     margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 h1 {
