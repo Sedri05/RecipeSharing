@@ -28,7 +28,6 @@
                 <label class="ConPassword" for="confirm_password">Confirm Password</label>
                 <input class="text" type="password" id="confirm_password" oninput="checkPassword()"> </input>
                 <p id="confirm_password_error"></p>  <!--Errors hier-->
-                <p>Tos hier?</p>
                 <input class="button" type="button" onclick="signup()" value="Sign Up"></input>
                 <p id="general_error"></p> <!--Hier komen general errors. Maak dit rood-->
                 <a href="../login">Ik heb al een account.</a>
